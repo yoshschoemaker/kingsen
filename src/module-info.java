@@ -6,5 +6,5 @@ module Kingsen {
     requires javafx.fxml;
     requires javafx.base;
 
-    opens sample;
+    opens Kingsen;
 }
