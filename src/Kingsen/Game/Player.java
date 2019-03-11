@@ -1,13 +1,20 @@
 package Kingsen.Game;
 
-public class Player {
+import Kingsen.Observe.Observable;
+import Kingsen.Observe.Observer;
+
+import java.util.List;
+
+public class Player implements Observable {
+
     private int id;
     private String name;
-    private int penaltyScore;
+    private int score;
+    private List<Observer> observers;
 
     public Player(String name) {
         this.name = name;
-        penaltyScore = 0;
+        score = 0;
     }
 
     public void setName(String name) {
@@ -18,10 +25,6 @@ public class Player {
         this.id = id;
     }
 
-    public void setPenaltyScore(int penaltyScore) {
-        this.penaltyScore = penaltyScore;
-    }
-
     public String getName() {
         return name;
     }
@@ -30,7 +33,17 @@ public class Player {
         return id;
     }
 
-    public int getPenaltyScore() {
-        return penaltyScore;
+    public int getScore() {
+        return score;
+    }
+
+    @Override
+    public void addObserver(Observer observer) {
+        observers.add(observer);
+    }
+
+    @Override
+    public void notifyAllObservers() {
+
     }
 }
