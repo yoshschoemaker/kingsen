@@ -1,11 +1,10 @@
 package Kingsen.Game;
 
-import Kingsen.Observe.Observable;
 import Kingsen.Observe.Observer;
 
 import java.util.List;
 
-public class Player implements Observable {
+public class Player {
 
     private int id;
     private String name;
@@ -37,12 +36,10 @@ public class Player implements Observable {
         return score;
     }
 
-    @Override
     public void addObserver(Observer observer) {
         observers.add(observer);
     }
 
-    @Override
     public void notifyAllObservers() {
 
     }
