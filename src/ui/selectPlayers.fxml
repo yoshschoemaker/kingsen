@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="360.0" style="-fx-background-color: #3F4FA5;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.Main">
+   <children>
+      <ImageView fitHeight="135.0" fitWidth="360.0" layoutY="511.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/bottom-dec.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Players" textAlignment="CENTER" wrappingWidth="360.0">
+         <font>
+            <Font name="Open Sans Bold" size="24.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="startButton" fitHeight="61.0" fitWidth="61.0" layoutX="150.0" layoutY="392.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/btn-play.png" />
+         </image>
+      </ImageView>
+      <TextField layoutX="87.0" layoutY="178.0" styleClass="playerBlock" stylesheets="@style.css" text="Henk">
+         <font>
+            <Font name="Open Sans SemiBold" size="14.0" />
+         </font></TextField>
+      <Button layoutX="233.0" layoutY="179.0" mnemonicParsing="false" styleClass="playerRemoveBtn" stylesheets="@style.css" text="Button" />
+      <Button layoutX="234.0" layoutY="234.0" mnemonicParsing="false" styleClass="playerRemoveBtn" stylesheets="@style.css" text="Button" />
+      <TextField layoutX="88.0" layoutY="233.0" styleClass="playerBlock" stylesheets="@style.css" text="Henk">
+         <font>
+            <Font name="Open Sans SemiBold" size="14.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="87.0" layoutY="286.0" styleClass="playerAddBlock" stylesheets="@style.css" text="Naam">
+         <font>
+            <Font name="Open Sans SemiBold" size="14.0" />
+         </font>
+      </TextField>
+      <Button layoutX="233.0" layoutY="287.0" mnemonicParsing="false" styleClass="playerAddBtn" stylesheets="@style.css" text="Button" />
+   </children>
+</Pane>

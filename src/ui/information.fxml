@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="360.0" style="-fx-background-color: #3F4FA5;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.Main">
+    <children>
+        <ImageView fitHeight="135.0" fitWidth="360.0" layoutY="511.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/bottom-dec.png" />
+            </image>
+        </ImageView>
+        <Text fill="WHITE" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Information" textAlignment="CENTER" wrappingWidth="360.0">
+            <font>
+                <Font name="Open Sans Bold" size="24.0" />
+            </font>
+        </Text>
+      <Button layoutX="90.0" layoutY="385.0" mnemonicParsing="false" stylesheets="@style.css" text="Back" textFill="WHITE">
+         <font>
+            <Font name="Open Sans ExtraBold" size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="53.0" layoutY="137.0" prefHeight="221.0" prefWidth="254.0" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard." textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Open Sans SemiBold" size="12.0" />
+         </font>
+      </Label>
+    </children>
+</Pane>
