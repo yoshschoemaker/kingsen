@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.image.*?>
-<?import javafx.scene.shape.*?>
-<?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="360.0" style="-fx-background-color: #3F4FA5;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.Main">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="360.0" style="-fx-background-color: #3F4FA5;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="ui.startController">
    <children>
       <ImageView fitHeight="135.0" fitWidth="360.0" layoutY="511.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -19,12 +16,12 @@
             <Font name="Open Sans Bold" size="48.0" />
          </font>
       </Text>
-      <ImageView fx:id="startButton" fitHeight="90.0" fitWidth="90.0" layoutX="135.0" layoutY="275.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="startButton" fitHeight="90.0" fitWidth="90.0" layoutX="135.0" onMouseClicked="#startButtonPushed" layoutY="275.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/btn-play.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="55.0" fitWidth="55.0" layoutX="55.0" layoutY="293.0" onMouseClicked="#settingsClicked" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="55.0" fitWidth="55.0" layoutX="55.0" layoutY="293.0" onMouseClicked="#settingsButtonPushed" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/btn-settings.png" />
          </image>

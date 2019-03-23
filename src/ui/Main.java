@@ -8,24 +8,20 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
-    static Stage primaryStage;
-
     @Override
-    public void start(Stage primaryStage) throws Exception {
-        this.primaryStage = primaryStage;
-        changeScene("start.fxml");
-        this.primaryStage.show();
+    public void start(Stage stage) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("start.fxml"));
+
+        Scene scene = new Scene(root);
+
+        stage.setScene(scene);
+        stage.show();
     }
 
-    public void changeScene(String fxml) throws Exception{
-        Parent pane = FXMLLoader.load(
-                getClass().getResource(fxml));
-        Scene scene = new Scene(pane);
-        this.primaryStage.setScene(scene);
-    }
-
-    public void settingsClicked() throws Exception{
-        System.out.print(this.primaryStage);
-        changeScene("settings.fxml");
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        launch(args);
     }
 }
