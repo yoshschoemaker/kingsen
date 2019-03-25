@@ -1,15 +1,16 @@
 package Kingsen.Game;
 
+import Kingsen.Build.Card;
 import Kingsen.Observe.Observer;
 
 import java.util.List;
 
 public class Player {
 
-    private int id;
     private String name;
     private int score;
     private List<Observer> observers;
+    private List<Card> cards;
 
     public Player(String name) {
         this.name = name;
@@ -20,20 +21,20 @@ public class Player {
         this.name = name;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public String getName() {
         return name;
     }
 
-    public int getId() {
-        return id;
-    }
-
     public int getScore() {
         return score;
+    }
+
+    public List<Card> getCards() {
+        return cards;
+    }
+
+    public void playCard(Card card) {
+
     }
 
     public void addObserver(Observer observer) {

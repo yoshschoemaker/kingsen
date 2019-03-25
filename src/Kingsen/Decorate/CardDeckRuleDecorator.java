@@ -1,5 +1,10 @@
 package Kingsen.Decorate;
 
+import Kingsen.Build.Card;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class CardDeckRuleDecorator extends CardDeckDecorator {
 
     CardDeckRuleDecorator(CardDeckInterface cardDeckInterface) {
@@ -7,8 +12,8 @@ public class CardDeckRuleDecorator extends CardDeckDecorator {
     }
 
     @Override
-    public void generateCardDeck() {
-        super.generateCardDeck();
+    public ArrayList<Card> generateCardDeck() {
+        return super.generateCardDeck();
     }
 
     private void addCardRules() {

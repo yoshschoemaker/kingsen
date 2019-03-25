@@ -7,7 +7,6 @@ public class CardBuilder implements Builder {
     private Face face;
     private Properties properties;
 
-
     @Override
     public void setType(Type type) {
         this.type = type;

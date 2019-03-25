@@ -31,6 +31,10 @@ public class Card {
         return face;
     }
 
+    public boolean isNumberCard() {
+        return face == Face.NUMBER;
+    }
+
     public Properties getProperties() {
         return properties;
     }

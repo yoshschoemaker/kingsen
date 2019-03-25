@@ -1,5 +1,10 @@
 package Kingsen.Decorate;
 
+import Kingsen.Build.Card;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public interface CardDeckInterface {
-    void generateCardDeck();
+    ArrayList<Card> generateCardDeck();
 }
