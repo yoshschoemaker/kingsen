@@ -15,13 +15,11 @@ public class Main extends Application {
         Game game = new Game();
         game.init();
 
-        // Parent root = FXMLLoader.load(getClass().getResource("Main-no-styling.fxml"));
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Main-no-styling.fxml"));
         Parent root = loader.load();
-
-        // TODO: Start from below
-        // loader.setController();
-
+        IntroController introController = loader.getController();
+        introController.setGame(game);
+        introController.setCurrStage(primaryStage);
         primaryStage.setTitle("Kingsen App");
         primaryStage.setResizable(false);
         primaryStage.setScene(new Scene(root));
@@ -29,10 +27,6 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) {
-        /*game.executeCommand(new AddPlayerCommand(game, new Player("Yosh")));
-        game.executeCommand(new AddPlayerCommand(game, new Player("Aron")));
-        game.getPlayerNames();*/
-
         launch(args);
     }
 }
