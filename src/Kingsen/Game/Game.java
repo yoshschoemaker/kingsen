@@ -47,7 +47,7 @@ public class Game implements Observable {
         System.out.println("--- TURN OBJECT SET ---");
 
         System.out.println("--- SETTING UP END GAME OBSERVER ---");
-        new EndGameObserver(this);
+        new KingCardObserver(this);
         notifyAllObservers();
         System.out.println("--- END GAME OBSERVER IS SET AND NOTIFIED ---");
 

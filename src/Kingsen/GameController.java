@@ -2,10 +2,7 @@ package Kingsen;
 
 import Kingsen.Build.Card;
 import Kingsen.Command.NextTurnCommand;
-import Kingsen.Command.SelectLoserCommand;
-import Kingsen.Game.Player;
 import Kingsen.Helpers.ConsoleColors;
-import Kingsen.Observe.EndGameObserver;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

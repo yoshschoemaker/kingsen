@@ -4,11 +4,11 @@ import Kingsen.Build.Card;
 import Kingsen.Build.Face;
 import Kingsen.Game.Game;
 
-public class EndGameObserver extends Observer {
+public class KingCardObserver extends Observer {
 
     private Game game;
 
-    public EndGameObserver(Game game) {
+    public KingCardObserver(Game game) {
         game.addObserver(this);
         this.game = game;
     }
