@@ -26,7 +26,6 @@ public class GameController extends Controller {
     @Override
     public void afterInitialization() {
         game.start();
-        new EndGameObserver(game);
 
         int i = 1;
         for (Card card : game.getCards()) {
@@ -49,19 +48,22 @@ public class GameController extends Controller {
         Card card = (Card) btn.getUserData();
         btn.setVisible(false);
 
-        if (card.isNumberCard()) {
-            System.out.println(String.format("%1$s has picked card with number %2$s", game.getTurn().getCurrentPlayer().getName(), card.getNumber()));
-        } else {
-            System.out.println(String.format("%1$s has picked card with face %2$s", game.getTurn().getCurrentPlayer().getName(), card.getFace()));
-        }
-
         if (!game.isGameOver()) {
-            game.executeCommand(new SelectLoserCommand(game, game.getTurn().getCurrentPlayer()));
-            game.executeCommand(new NextTurnCommand(game, card));
-            System.out.println(ConsoleColors.BLUE + game.getTurn().getCurrentPlayer().getName() + "'s turn now" + ConsoleColors.RESET);
-            for (Player player : game.getPlayerRanklist()) {
-                System.out.println(player.toString());
+            if (card.isNumberCard()) {
+                System.out.println(String.format("%1$s has picked card with number %2$s", game.getTurn().getCurrentPlayer().getName(), card.getNumber()));
+            } else {
+                System.out.println(String.format("%1$s has picked card with face %2$s", game.getTurn().getCurrentPlayer().getName(), card.getFace()));
             }
+
+            System.out.println(String.format("%1$s: %2$s", card.getRule().getRuleTitle(), card.getRule().getDescription()));
+
+            // game.executeCommand(new SelectLoserCommand(game, game.getTurn().getCurrentPlayer()));
+            game.executeCommand(new NextTurnCommand(game, card));
+            System.out.println(ConsoleColors.BLUE + game.getTurn().getCurrentPlayer().getName() + "'s turn now - " + game.getKingsLeft() + " king card(s) left." + ConsoleColors.RESET);
+
+            /*for (Player player : game.getPlayerRanklist()) {
+                System.out.println(player.toString());
+            }*/
         } else {
             System.out.println(ConsoleColors.RED + "GAME OVER!" + ConsoleColors.RESET);
         }

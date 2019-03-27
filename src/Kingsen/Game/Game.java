@@ -19,6 +19,7 @@ public class Game implements Observable {
     private Turn turn;
     private List<Observer> observers = new ArrayList<>();
     private boolean gameOver = false;
+    private int kingsLeft;
 
     public void init() {
         System.out.println("--- GAME INITIALIZED ---");
@@ -31,19 +32,24 @@ public class Game implements Observable {
 
         System.out.println("--- STARTED GENERATING THE CARD DECK ---");
         cards = cardDeck.generateCardDeck();
-        for (Card card : cards) {
+        /*for (Card card : cards) {
             if (card.isNumberCard()) {
                 System.out.println(String.format("%3$s %2$s (%4$s) card with rule: '%1$s'", card.getRule().getRuleTitle(), card.getFace(), card.getType(), card.getNumber()));
             } else {
                 System.out.println(String.format("%3$s %2$s card with rule: '%1$s'", card.getRule().getRuleTitle(), card.getFace(), card.getType()));
             }
-        }
-        System.out.println(cards.size());
+        }*/
+        System.out.println(cards.size() + " have been generated");
         System.out.println("--- FINISHED GENERATING THE CARD DECK ---");
 
         System.out.println("--- SETTING UP TURN OBJECT ---");
         this.turn = new Turn(players);
         System.out.println("--- TURN OBJECT SET ---");
+
+        System.out.println("--- SETTING UP END GAME OBSERVER ---");
+        new EndGameObserver(this);
+        notifyAllObservers();
+        System.out.println("--- END GAME OBSERVER IS SET AND NOTIFIED ---");
 
         System.out.println(ConsoleColors.GREEN + "\n--- GAME STARTED! HAVE FUN PLAYING ---" + ConsoleColors.RESET);
     }
@@ -93,6 +99,14 @@ public class Game implements Observable {
 
     public void setGameOver(boolean gameOver) {
         this.gameOver = gameOver;
+    }
+
+    public int getKingsLeft() {
+        return kingsLeft;
+    }
+
+    public void setKingsLeft(int kingsLeft) {
+        this.kingsLeft = kingsLeft;
     }
 
     // TODO: implement below when restarting the game

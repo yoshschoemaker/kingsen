@@ -15,16 +15,18 @@ public class EndGameObserver extends Observer {
 
     @Override
     public void update() {
-        boolean allKingCardsPicked = true;
+        int countKings = 0;
 
         for (Card card : game.getCards()) {
             if (card.getFace().equals(Face.KING)) {
-                allKingCardsPicked = false;
+                countKings++;
             }
         }
 
-        if (allKingCardsPicked) {
+        if (countKings == 0) {
             game.setGameOver(true);
         }
+
+        game.setKingsLeft(countKings);
     }
 }
