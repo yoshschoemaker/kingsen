@@ -28,8 +28,8 @@
                </font>
                <VBox.margin>
                   <Insets>
-                     <top>80</top>
-                     <bottom>40</bottom>
+                     <top>40</top>
+                     <bottom>20</bottom>
                   </Insets>
                </VBox.margin>
             </Text>
@@ -59,8 +59,13 @@
                </padding>
             </HBox>
 
-            <VBox fx:id="uiPlayerList" alignment="CENTER">
-            </VBox>
+            <ScrollPane hbarPolicy="NEVER" prefHeight="180.0" prefWidth="360.0" stylesheets="@style.css" vbarPolicy="AS_NEEDED">
+               <content>
+                  <VBox prefWidth="328.0" maxWidth="-Infinity" alignment="CENTER" fx:id="uiPlayerList">
+
+                  </VBox>
+               </content>
+            </ScrollPane>
 
             <ImageView fx:id="startButton" onMouseClicked="#continueButtonPushed" fitHeight="61.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
                <image>
