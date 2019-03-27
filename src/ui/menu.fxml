@@ -6,7 +6,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="360.0" style="-fx-background-color: #3F4FA5;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.givePenaltyController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="360.0" style="-fx-background-color: #3F4FA5;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.menuController">
    <children>
 
        <VBox alignment="BOTTOM_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="360.0" spacing="8.0" VBox.vgrow="ALWAYS">
@@ -52,7 +52,7 @@
 
                        <HBox alignment="TOP_RIGHT">
                            <children>
-                               <ImageView onMouseClicked="#openMenuClicked" fitHeight="16.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                               <ImageView onMouseClicked="#closeMenuClicked" fitHeight="16.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                                    <image>
                                        <Image url="@../images/menu-icon.png" />
                                    </image>
@@ -66,7 +66,7 @@
                </HBox>
                <!-- // Menu and kings -->
 
-               <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Who got a penalty point?" textAlignment="CENTER" wrappingWidth="360.0">
+               <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu" textAlignment="CENTER" wrappingWidth="360.0">
                    <font>
                        <Font name="Open Sans Bold" size="24.0" />
                    </font>
@@ -77,31 +77,49 @@
                        </Insets>
                    </VBox.margin>
                </Text>
-             <Button mnemonicParsing="false" styleClass="button" onMouseClicked="#continueClicked" stylesheets="@style.css" text="Henk" textFill="WHITE">
+             <Button mnemonicParsing="false" styleClass="button" onMouseClicked="#givePenaltyClicked" stylesheets="@style.css" text="Give penalty" textFill="WHITE">
                 <font>
                    <Font name="Open Sans ExtraBold" size="14.0" />
                 </font>
              </Button>
-             <Button mnemonicParsing="false" styleClass="button" onMouseClicked="#continueClicked" stylesheets="@style.css" text="Aron" textFill="WHITE">
+             <Button mnemonicParsing="false" styleClass="button" onMouseClicked="#closeMenuClicked" stylesheets="@style.css" text="Close menu" textFill="WHITE">
                 <font>
                    <Font name="Open Sans ExtraBold" size="14.0" />
                 </font>
              </Button>
-             <Button mnemonicParsing="false" styleClass="button" onMouseClicked="#continueClicked" stylesheets="@style.css" text="Yosh" textFill="WHITE">
+             <Button mnemonicParsing="false" styleClass="button" stylesheets="@style.css" text="Quit game" textFill="WHITE">
                 <font>
                    <Font name="Open Sans ExtraBold" size="14.0" />
                 </font>
              </Button>
-             <Button mnemonicParsing="false" styleClass="cancelBtn" onMouseClicked="#continueClicked" stylesheets="@style.css" text="Skip" textFill="WHITE">
-                <font>
-                   <Font name="Open Sans ExtraBold" size="14.0" />
-                </font>
-                 <VBox.margin>
-                     <Insets>
-                         <top>20</top>
-                     </Insets>
-                 </VBox.margin>
-             </Button>
+
+           <Text fill="WHITE" text="Ranking" textAlignment="CENTER" wrappingWidth="360.0">
+               <font>
+                   <Font name="Open Sans Bold" size="16.0" />
+               </font>
+               <VBox.margin>
+                   <Insets>
+                       <top>40</top>
+                   </Insets>
+               </VBox.margin>
+           </Text>
+
+           <Text fill="WHITE" text="1. Aron 2pts" textAlignment="CENTER" wrappingWidth="360.0">
+               <font>
+                   <Font name="Open Sans Bold" size="14.0" />
+               </font>
+           </Text>
+           <Text fill="WHITE" text="2. Henk 8pts" textAlignment="CENTER" wrappingWidth="360.0">
+               <font>
+                   <Font name="Open Sans Bold" size="14.0" />
+               </font>
+           </Text>
+           <Text fill="WHITE" text="3. Yosh 22pts" textAlignment="CENTER" wrappingWidth="360.0">
+               <font>
+                   <Font name="Open Sans Bold" size="14.0" />
+               </font>
+           </Text>
+
            </children>
            <padding>
                <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />

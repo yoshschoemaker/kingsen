@@ -44,7 +44,7 @@
 
                   <HBox alignment="TOP_RIGHT">
                      <children>
-                        <ImageView fitHeight="16.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView onMouseClicked="#openMenuClicked" fitHeight="16.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../images/menu-icon.png" />
                            </image>

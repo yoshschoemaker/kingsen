@@ -2,62 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4cada829-d9a5-49fc-8f35-bd6640b4e4dd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/images/card-bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/clubs-bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/clubs.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/crown-white.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/diamonds-bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/diamonds.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/hearts-bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/hearts.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/menu-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/spades-bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/spades.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/card.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/cardController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/game.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/gameController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/givePenalty.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/givePenaltyController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/informationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui/menu.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui/menuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/assets/fontawesome/css/all.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/assets/fontawesome/css/all.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/assets/fontawesome/css/brands.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/assets/fontawesome/css/brands.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/assets/fontawesome/css/fontawesome.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/assets/fontawesome/css/fontawesome.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/assets/fontawesome/css/regular.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/assets/fontawesome/css/regular.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/assets/fontawesome/css/solid.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/assets/fontawesome/css/solid.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/assets/fontawesome/css/svg-with-js.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/assets/fontawesome/css/svg-with-js.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/assets/fontawesome/css/v4-shims.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/assets/fontawesome/css/v4-shims.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/assets/fontawesome/webfonts/fa-brands-400.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/assets/fontawesome/webfonts/fa-brands-400.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/assets/fontawesome/webfonts/fa-brands-400.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/assets/fontawesome/webfonts/fa-brands-400.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/assets/fontawesome/webfonts/fa-brands-400.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/assets/fontawesome/webfonts/fa-regular-400.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/assets/fontawesome/webfonts/fa-regular-400.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/assets/fontawesome/webfonts/fa-regular-400.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/assets/fontawesome/webfonts/fa-regular-400.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/assets/fontawesome/webfonts/fa-regular-400.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/assets/fontawesome/webfonts/fa-solid-900.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/assets/fontawesome/webfonts/fa-solid-900.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/assets/fontawesome/webfonts/fa-solid-900.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/assets/fontawesome/webfonts/fa-solid-900.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/assets/fontawesome/webfonts/fa-solid-900.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/chooseLoser.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/information.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/information.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/selectPlayers.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/selectPlayers.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/settings.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/settings.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/start.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/start.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/startController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/startController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/card.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/card.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/cardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/cardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/game.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/game.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/gameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/gameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/givePenalty.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/givePenalty.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/givePenaltyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/givePenaltyController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -68,43 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ui/information.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" selection-start-line="8" selection-end-line="60" selection-end-column="7" />
-            </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ui/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ui/settings.fxml">
+        <entry file="file://$PROJECT_DIR$/src/ui/menu.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="42" column="41" lean-forward="true" selection-start-line="42" selection-start-column="41" selection-end-line="42" selection-end-column="41" />
-            </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ui/givePenalty.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" selection-end-column="28" />
+            <state relative-caret-position="112">
+              <caret line="102" column="28" lean-forward="true" selection-start-line="102" selection-start-column="28" selection-end-line="102" selection-end-column="28" />
             </state>
           </provider>
           <provider editor-type-id="JavaFX-Scene-Builder" />
@@ -137,17 +58,19 @@
         <option value="$PROJECT_DIR$/src/ui/selectPlayersController.java" />
         <option value="$PROJECT_DIR$/src/ui/startController.java" />
         <option value="$PROJECT_DIR$/src/ui/start.fxml" />
-        <option value="$PROJECT_DIR$/src/ui/gameController.java" />
         <option value="$PROJECT_DIR$/src/ui/selectPlayers.fxml" />
-        <option value="$PROJECT_DIR$/src/ui/cardController.java" />
-        <option value="$PROJECT_DIR$/src/ui/givePenaltyController.java" />
-        <option value="$PROJECT_DIR$/src/ui/game.fxml" />
-        <option value="$PROJECT_DIR$/src/ui/givePenalty.fxml" />
         <option value="$PROJECT_DIR$/src/ui/style.css" />
-        <option value="$PROJECT_DIR$/src/ui/card.fxml" />
         <option value="$PROJECT_DIR$/src/ui/information.fxml" />
         <option value="$PROJECT_DIR$/src/ui/Main.java" />
         <option value="$PROJECT_DIR$/src/ui/settings.fxml" />
+        <option value="$PROJECT_DIR$/src/ui/menuController.java" />
+        <option value="$PROJECT_DIR$/src/ui/gameController.java" />
+        <option value="$PROJECT_DIR$/src/ui/givePenaltyController.java" />
+        <option value="$PROJECT_DIR$/src/ui/cardController.java" />
+        <option value="$PROJECT_DIR$/src/ui/game.fxml" />
+        <option value="$PROJECT_DIR$/src/ui/card.fxml" />
+        <option value="$PROJECT_DIR$/src/ui/givePenalty.fxml" />
+        <option value="$PROJECT_DIR$/src/ui/menu.fxml" />
       </list>
     </option>
   </component>
@@ -195,7 +118,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553712734906" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553713746923" />
     <property name="last_opened_file_path" value="C:/Program Files/Java/javafx-jmods-11.0.2" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Problems" />
@@ -204,6 +127,12 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\SchoolDocumenten\Design Patterns\Projects\kingsen\src\ui" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ui" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\SchoolDocumenten\Design Patterns\Projects\kingsen\src\ui" />
     </key>
@@ -260,7 +189,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31389000" />
+    <option name="totallyTimeSpent" value="32400000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -366,33 +295,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/gameController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="23" column="8" lean-forward="true" selection-start-line="23" selection-start-column="8" selection-end-line="30" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/givePenaltyController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/cardController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ui/selectPlayers.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-102">
@@ -408,26 +310,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/card.fxml">
+    <entry file="file://$PROJECT_DIR$/src/ui/settings.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="88" column="29" lean-forward="true" selection-start-line="88" selection-start-column="29" selection-end-line="88" selection-end-column="29" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/game.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="111" column="7" lean-forward="true" selection-start-line="7" selection-end-line="111" selection-end-column="7" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/givePenalty.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" selection-end-column="28" />
+        <state relative-caret-position="149">
+          <caret line="53" column="26" lean-forward="true" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
         </state>
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
@@ -450,10 +336,68 @@
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/settings.fxml">
+    <entry file="file://$PROJECT_DIR$/src/ui/menuController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="42" column="41" lean-forward="true" selection-start-line="42" selection-start-column="41" selection-end-line="42" selection-end-column="41" />
+        <state relative-caret-position="340">
+          <caret line="36" column="40" lean-forward="true" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/cardController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/givePenaltyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/gameController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="35" column="30" lean-forward="true" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/card.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="46" column="69" selection-start-line="46" selection-start-column="69" selection-end-line="46" selection-end-column="69" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/game.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/givePenalty.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="49" column="38" lean-forward="true" selection-start-line="49" selection-start-column="38" selection-end-line="50" selection-end-column="30" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/menu.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="102" column="28" lean-forward="true" selection-start-line="102" selection-start-column="28" selection-end-line="102" selection-end-column="28" />
         </state>
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />

@@ -12,18 +12,11 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class givePenaltyController implements Initializable {
+public class menuController implements Initializable {
 
-
-    /**
-     * Will be called when the 'continue' button is clicked
-     * will either refer to 'select loser' screen or the 'game' screen.
-     */
-    public void continueClicked(MouseEvent event) throws IOException
+    public void givePenaltyClicked(MouseEvent event) throws IOException
     {
-        // Handle the continue button clicked
-
-        Parent startViewParent = FXMLLoader.load(getClass().getResource("game.fxml"));
+        Parent startViewParent = FXMLLoader.load(getClass().getResource("givePenalty.fxml"));
         Scene startViewScene = new Scene(startViewParent);
 
         // This line gets the Stage information
@@ -33,11 +26,9 @@ public class givePenaltyController implements Initializable {
         window.show();
     }
 
-    public void openMenuClicked(MouseEvent event) throws IOException
+    public void closeMenuClicked(MouseEvent event) throws IOException
     {
-        // Handle card clicked
-
-        Parent startViewParent = FXMLLoader.load(getClass().getResource("menu.fxml"));
+        Parent startViewParent = FXMLLoader.load(getClass().getResource("game.fxml"));
         Scene startViewScene = new Scene(startViewParent);
 
         // This line gets the Stage information
