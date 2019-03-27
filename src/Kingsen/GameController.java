@@ -1,91 +1,69 @@
 package Kingsen;
 
-import Kingsen.Command.AddPlayerCommand;
-import Kingsen.Game.Game;
-import javafx.event.ActionEvent;
+import Kingsen.Build.Card;
+import Kingsen.Command.NextTurnCommand;
+import Kingsen.Command.SelectLoserCommand;
+import Kingsen.Game.Player;
+import Kingsen.Helpers.ConsoleColors;
+import Kingsen.Observe.EndGameObserver;
 import javafx.event.Event;
 import javafx.fxml.FXML;
-import javafx.geometry.Pos;
-import javafx.scene.Node;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
-import javafx.scene.control.Control;
-import javafx.scene.control.ScrollPane;
-import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+
+import java.io.IOException;
 
 public class GameController extends Controller {
 
     @FXML
-    private VBox addPlayersVBox;
+    private VBox container;
 
     @FXML
-    private ScrollPane playerScrollPane;
+    private HBox cardsContainer;
 
-    @FXML
-    private VBox playerListVBox;
+    @Override
+    public void afterInitialization() {
+        game.start();
+        new EndGameObserver(game);
 
-    @FXML
-    private void quitButton() {
-        switchScene("Main-no-styling");
-    }
-
-    @FXML
-    private void addPlayer(Event event) {
-        // THIS FUNCTION IS FOR TESTING
-
-        Button btn = (Button) event.getSource();
-        HBox hbox = (HBox) btn.getParent();
-        VBox container = (VBox) hbox.getParent();
-
-        btn.setText("-");
-        btn.setOnAction(this::removePlayer);
-
-        HBox newHbox = new HBox(10);
-        newHbox.setPrefWidth(231);
-        newHbox.setPrefHeight(35);
-        newHbox.setAlignment(Pos.TOP_CENTER);
-
-        TextField newTextField = new TextField();
-        newTextField.setPrefWidth(183);
-        newTextField.setPrefHeight(25);
-
-        Button newBtn = new Button("+");
-        newBtn.setOnAction(this::addPlayer);
-        newBtn.setPrefWidth(25);
-
-        newHbox.getChildren().add(newTextField);
-        newHbox.getChildren().add(newBtn);
-
-        container.getChildren().add(newHbox);
-        playerScrollPane.vvalueProperty().bind(container.heightProperty());
-    }
-
-    @FXML
-    private void removePlayer(Event event) {
-        Button btn = (Button) event.getSource();
-        HBox hbox = (HBox) btn.getParent();
-        VBox container = (VBox) hbox.getParent();
-
-        // remove the hbox
-        container.getChildren().remove(hbox);
-    }
-
-    @FXML
-    private void startFullGame() {
-        addPlayersVBox.setVisible(false);
-
-        /*for (Node node : playerListVBox.getChildren()) {
-            if (node instanceof HBox) {
-                HBox hBox = (HBox) node;
-                for (Node hBoxNode : hBox.getChildren()) {
-                    if (hBoxNode instanceof TextField) {
-                        TextField playerTextField = (TextField) node;
-                        System.out.println(playerTextField.getText());
-                    }
-                }
+        int i = 1;
+        for (Card card : game.getCards()) {
+            try {
+                Button btn = FXMLLoader.load(getClass().getResource("DataTemplates/GameCard.fxml"));
+                btn.setText(Integer.toString(i));
+                btn.setUserData(card);
+                btn.setOnAction(this::cardChosen);
+                cardsContainer.getChildren().add(btn);
+            } catch (IOException e) {
+                e.printStackTrace();
             }
 
-        }*/
+            i++;
+        }
+    }
+
+    private void cardChosen(Event event) {
+        Button btn = (Button) event.getSource();
+        Card card = (Card) btn.getUserData();
+        btn.setVisible(false);
+
+        if (card.isNumberCard()) {
+            System.out.println(String.format("%1$s has picked card with number %2$s", game.getTurn().getCurrentPlayer().getName(), card.getNumber()));
+        } else {
+            System.out.println(String.format("%1$s has picked card with face %2$s", game.getTurn().getCurrentPlayer().getName(), card.getFace()));
+        }
+
+        if (!game.isGameOver()) {
+            game.executeCommand(new SelectLoserCommand(game, game.getTurn().getCurrentPlayer()));
+            game.executeCommand(new NextTurnCommand(game, card));
+            System.out.println(ConsoleColors.BLUE + game.getTurn().getCurrentPlayer().getName() + "'s turn now" + ConsoleColors.RESET);
+            for (Player player : game.getPlayerRanklist()) {
+                System.out.println(player.toString());
+            }
+        } else {
+            System.out.println(ConsoleColors.RED + "GAME OVER!" + ConsoleColors.RESET);
+        }
     }
 }

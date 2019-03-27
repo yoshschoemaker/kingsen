@@ -1,20 +1,21 @@
 package Kingsen.Game;
 
 import Kingsen.Build.Card;
+import Kingsen.Observe.Observable;
 import Kingsen.Observe.Observer;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class Player {
+public class Player implements Comparable<Player>, Observable {
 
     private String name;
-    private int score;
-    private List<Observer> observers;
-    private List<Card> cards;
+    private Integer score = 0;
+    private List<Observer> observers = new ArrayList<>();
+    private List<Card> cards = new ArrayList<>();
 
     public Player(String name) {
         this.name = name;
-        score = 0;
     }
 
     public void setName(String name) {
@@ -25,7 +26,7 @@ public class Player {
         return name;
     }
 
-    public int getScore() {
+    public Integer getScore() {
         return score;
     }
 
@@ -33,8 +34,9 @@ public class Player {
         return cards;
     }
 
-    public void playCard(Card card) {
-
+    public void addOneToScore() {
+        score++;
+        notifyAllObservers();
     }
 
     public void addObserver(Observer observer) {
@@ -42,6 +44,18 @@ public class Player {
     }
 
     public void notifyAllObservers() {
+        for (Observer observer : observers) {
+            observer.update();
+        }
+    }
 
+    @Override
+    public String toString() {
+        return "Player " + getName() + " with score " + getScore();
+    }
+
+    @Override
+    public int compareTo(Player o) {
+        return this.getScore().compareTo(o.getScore());
     }
 }

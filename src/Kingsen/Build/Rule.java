@@ -1,27 +1,27 @@
 package Kingsen.Build;
 
 public class Rule {
-    private String rule;
-    private String penalty;
+    private String ruleTitle;
+    private String description;
 
-    public Rule(String rule, String penalty) {
-        this.rule = rule;
-        this.rule = penalty;
+    public Rule(String ruleTitle, String description) {
+        this.ruleTitle = ruleTitle;
+        this.description = description;
     }
 
-    public void setRule(String rule) {
-        this.rule = rule;
+    public void setDescription(String rule) {
+        this.description = rule;
     }
 
-    public void setPenalty(String penalty) {
-        this.penalty = penalty;
+    public void setRuleTitle(String penalty) {
+        this.ruleTitle = penalty;
     }
 
-    public String getRule() {
-        return rule;
+    public String getDescription() {
+        return description;
     }
 
-    public String getPenalty() {
-        return penalty;
+    public String getRuleTitle() {
+        return ruleTitle;
     }
 }

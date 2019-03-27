@@ -1,5 +1,5 @@
 package Kingsen.Observe;
 
-public interface Observer {
-    void update();
+public abstract class Observer {
+    public abstract void update();
 }

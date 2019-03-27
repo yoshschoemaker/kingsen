@@ -20,9 +20,6 @@ public class IntroController extends Controller {
 
     @FXML
     private void startGameButtonClicked() {
-        System.out.print("Start game button clicked");
-        game.start();
-
-        switchScene("Main-game-no-styling");
+        switchScene("Main-pre-game-no-styling");
     }
 }

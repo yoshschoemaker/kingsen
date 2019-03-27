@@ -20,6 +20,8 @@ public abstract class Controller {
             currController.setGame(game);
             currController.setCurrStage(currStage);
             currStage.setScene(scene);
+
+            currController.afterInitialization();
         } catch (IOException ex) {
             ex.printStackTrace();
         }
@@ -31,5 +33,12 @@ public abstract class Controller {
 
     public void setCurrStage(Stage stage) {
         this.currStage = stage;
+    }
+
+    /**
+     * To be called after after initializing
+     */
+    public void afterInitialization() {
+        // Do whatever you want
     }
 }
