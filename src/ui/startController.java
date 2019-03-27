@@ -31,6 +31,22 @@ public class startController implements Initializable {
 
     /**
      * When this method is called, it will change the Scene to
+     * the settings menu
+     */
+    public void informationButtonPushed(MouseEvent event) throws IOException
+    {
+        Parent informationViewParent = FXMLLoader.load(getClass().getResource("information.fxml"));
+        Scene informationViewScene = new Scene(informationViewParent);
+
+        // This line gets the Stage information
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+
+        window.setScene(informationViewScene);
+        window.show();
+    }
+
+    /**
+     * When this method is called, it will change the Scene to
      * the player select screen
      */
     public void startButtonPushed(MouseEvent event) throws IOException
