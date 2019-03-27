@@ -72,7 +72,7 @@
 }
 
 .card{
-    -fx-background-image: url("../images/hearts-bg.png");
+    -fx-background-image: url("assets/images/hearts-bg.png");
     -fx-background-position: left top;
     -fx-background-repeat: no-repeat;
     -fx-background-size: contain;

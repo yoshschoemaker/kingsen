@@ -6,14 +6,14 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.geometry.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="360.0" style="-fx-background-color: #3F4FA5;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.selectPlayersController">
+<Pane stylesheets="@style.css" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="360.0" style="-fx-background-color: #3F4FA5;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.selectPlayersController">
    <children>
 
       <VBox alignment="BOTTOM_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="360.0" spacing="8.0" VBox.vgrow="ALWAYS">
          <children>
             <ImageView fitHeight="135.0" fitWidth="360.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/bottom-dec.png" />
+                  <Image url="@assets/images/bottom-dec.png" />
                </image>
             </ImageView>
          </children>
@@ -35,7 +35,7 @@
             </Text>
 
             <HBox HBox.hgrow="ALWAYS" alignment="CENTER">
-               <TextField styleClass="playerAddBlock" stylesheets="@style.css" text="Naam">
+               <TextField fx:id="playerNameInput" styleClass="playerAddBlock" stylesheets="@style.css" promptText="Naam">
                   <font>
                      <Font name="Open Sans SemiBold" size="14.0" />
                   </font>
@@ -45,11 +45,11 @@
                      </Insets>
                   </HBox.margin>
                </TextField>
-               <Button mnemonicParsing="false" styleClass="playerAddBtn" stylesheets="@style.css">
+               <Button mnemonicParsing="false" onMouseClicked="#addPlayer" styleClass="playerAddBtn" stylesheets="@style.css">
                   <graphic>
                      <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                         <image>
-                           <Image url="@../images/plus-icon.png" />
+                           <Image url="@assets/images/plus-icon.png" />
                         </image>
                      </ImageView>
                   </graphic>
@@ -59,31 +59,12 @@
                </padding>
             </HBox>
 
-            <HBox HBox.hgrow="ALWAYS" alignment="CENTER">
-               <Button styleClass="playerBlock" stylesheets="@style.css" text="Spelernaam">
-                  <font>
-                     <Font name="Open Sans SemiBold" size="14.0" />
-                  </font>
-                  <HBox.margin>
-                     <Insets>
-                        <right>8</right>
-                     </Insets>
-                  </HBox.margin>
-               </Button>
-               <Button mnemonicParsing="false" styleClass="playerRemoveBtn" stylesheets="@style.css">
-                  <graphic>
-                     <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                        <image>
-                           <Image url="@../images/minus-icon.png" />
-                        </image>
-                     </ImageView>
-                  </graphic>
-               </Button>
-            </HBox>
+            <VBox fx:id="uiPlayerList" alignment="CENTER">
+            </VBox>
 
             <ImageView fx:id="startButton" onMouseClicked="#continueButtonPushed" fitHeight="61.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/btn-play.png" />
+                  <Image url="@assets/images/btn-play.png" />
                </image>
                <VBox.margin>
                   <Insets>
