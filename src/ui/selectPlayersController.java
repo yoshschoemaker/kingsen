@@ -1,9 +1,11 @@
 package ui;
 
+import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -16,6 +18,7 @@ import javafx.scene.layout.*;
 import javafx.scene.control.*;
 import javafx.scene.image.*;
 import javafx.geometry.*;
+import javafx.event.EventHandler;
 
 public class selectPlayersController implements Initializable {
 
@@ -64,6 +67,17 @@ public class selectPlayersController implements Initializable {
         playerRemoveButton.getStyleClass().add("playerRemoveBtn");
         playerNameButton.getStyleClass().add("playerBlock");
 
+        // Add remove button event listener.
+        playerRemoveButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                var eventSrc  = event.getSource();
+                Button button = (Button) eventSrc;
+                HBox row = (HBox) button.getParent();
+                ((VBox) row.getParent()).getChildren().remove(row);
+            }
+        });
+
         // Add buttons to the HBox (one row)
         HBox hbox = new HBox(playerNameButton, playerRemoveButton);
         hbox.setMargin(playerNameButton, new Insets(0, 8, 0, 0));
@@ -73,4 +87,5 @@ public class selectPlayersController implements Initializable {
         // Add the row in the UI.
         uiPlayerList.getChildren().add(hbox);
     }
+
 }
