@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="360.0" style="-fx-background-color: #3F4FA5;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.givePenaltyController">
+   <children>
+
+       <VBox alignment="BOTTOM_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="360.0" spacing="8.0" VBox.vgrow="ALWAYS">
+          <children>
+                  <ImageView fitHeight="135.0" fitWidth="360.0" pickOnBounds="true" preserveRatio="true">
+                      <image>
+                          <Image url="@../images/bottom-dec.png" />
+                      </image>
+                  </ImageView>
+          </children>
+       </VBox>
+
+       <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="360.0" spacing="8.0">
+           <children>
+
+               <!-- Menu and kings -->
+               <HBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="360.0">
+                   <children>
+                       <HBox alignment="TOP_LEFT" HBox.hgrow="ALWAYS">
+                           <children>
+                               <ImageView fitHeight="16.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                   <image>
+                                       <Image url="@../images/crown-white.png" />
+                                   </image>
+                                   <HBox.margin>
+                                       <Insets>
+                                           <right>8</right>
+                                       </Insets>
+                                   </HBox.margin>
+                               </ImageView>
+                               <Text fx:id="kingsLeftToFind" fill="WHITE" text="4">
+                                   <font>
+                                       <Font name="Open Sans ExtraBold" size="14.0" />
+                                   </font>
+                                   <HBox.margin>
+                                       <Insets>
+                                           <top>-2.5</top>
+                                       </Insets>
+                                   </HBox.margin>
+                               </Text>
+                           </children>
+                       </HBox>
+
+                       <HBox alignment="TOP_RIGHT">
+                           <children>
+                               <ImageView onMouseClicked="#openMenuClicked" fitHeight="16.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                   <image>
+                                       <Image url="@../images/menu-icon.png" />
+                                   </image>
+                               </ImageView>
+                           </children>
+                       </HBox>
+                   </children>
+                   <padding>
+                       <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                   </padding>
+               </HBox>
+               <!-- // Menu and kings -->
+
+               <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Who got a penalty point?" textAlignment="CENTER" wrappingWidth="360.0">
+                   <font>
+                       <Font name="Open Sans Bold" size="24.0" />
+                   </font>
+                   <VBox.margin>
+                       <Insets>
+                           <top>80</top>
+                           <bottom>40</bottom>
+                       </Insets>
+                   </VBox.margin>
+               </Text>
+             <Button mnemonicParsing="false" styleClass="button" onMouseClicked="#continueClicked" stylesheets="@style.css" text="Henk" textFill="WHITE">
+                <font>
+                   <Font name="Open Sans ExtraBold" size="14.0" />
+                </font>
+             </Button>
+             <Button mnemonicParsing="false" styleClass="button" onMouseClicked="#continueClicked" stylesheets="@style.css" text="Aron" textFill="WHITE">
+                <font>
+                   <Font name="Open Sans ExtraBold" size="14.0" />
+                </font>
+             </Button>
+             <Button mnemonicParsing="false" styleClass="button" onMouseClicked="#continueClicked" stylesheets="@style.css" text="Yosh" textFill="WHITE">
+                <font>
+                   <Font name="Open Sans ExtraBold" size="14.0" />
+                </font>
+             </Button>
+             <Button mnemonicParsing="false" styleClass="cancelBtn" onMouseClicked="#continueClicked" stylesheets="@style.css" text="Skip" textFill="WHITE">
+                <font>
+                   <Font name="Open Sans ExtraBold" size="14.0" />
+                </font>
+                 <VBox.margin>
+                     <Insets>
+                         <top>20</top>
+                     </Insets>
+                 </VBox.margin>
+             </Button>
+           </children>
+           <padding>
+               <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+           </padding>
+       </VBox>
+   </children>
+
+</Pane>

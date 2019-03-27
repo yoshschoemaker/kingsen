@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="360.0" style="-fx-background-color: #3F4FA5;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.selectPlayersController">
+   <children>
+
+      <VBox alignment="BOTTOM_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="360.0" spacing="8.0" VBox.vgrow="ALWAYS">
+         <children>
+            <ImageView fitHeight="135.0" fitWidth="360.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/bottom-dec.png" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+
+      <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="360.0" spacing="8.0">
+         <children>
+
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Players" textAlignment="CENTER" wrappingWidth="360.0">
+               <font>
+                  <Font name="Open Sans Bold" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets>
+                     <top>80</top>
+                     <bottom>40</bottom>
+                  </Insets>
+               </VBox.margin>
+            </Text>
+
+            <HBox HBox.hgrow="ALWAYS" alignment="CENTER">
+               <TextField styleClass="playerAddBlock" stylesheets="@style.css" text="Naam">
+                  <font>
+                     <Font name="Open Sans SemiBold" size="14.0" />
+                  </font>
+                  <HBox.margin>
+                     <Insets>
+                        <right>8</right>
+                     </Insets>
+                  </HBox.margin>
+               </TextField>
+               <Button mnemonicParsing="false" styleClass="playerAddBtn" stylesheets="@style.css">
+                  <graphic>
+                     <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../images/plus-icon.png" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+               <padding>
+                  <Insets bottom="16.0" top="16.0" />
+               </padding>
+            </HBox>
+
+            <HBox HBox.hgrow="ALWAYS" alignment="CENTER">
+               <Button styleClass="playerBlock" stylesheets="@style.css" text="Spelernaam">
+                  <font>
+                     <Font name="Open Sans SemiBold" size="14.0" />
+                  </font>
+                  <HBox.margin>
+                     <Insets>
+                        <right>8</right>
+                     </Insets>
+                  </HBox.margin>
+               </Button>
+               <Button mnemonicParsing="false" styleClass="playerRemoveBtn" stylesheets="@style.css">
+                  <graphic>
+                     <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../images/minus-icon.png" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+            </HBox>
+
+            <ImageView fx:id="startButton" onMouseClicked="#continueButtonPushed" fitHeight="61.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/btn-play.png" />
+               </image>
+               <VBox.margin>
+                  <Insets>
+                     <top>20</top>
+                  </Insets>
+               </VBox.margin>
+            </ImageView>
+
+         </children>
+         <padding>
+            <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+         </padding>
+      </VBox>
+   </children>
+
+</Pane>
