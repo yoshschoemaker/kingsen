@@ -13,7 +13,7 @@
           <children>
                   <ImageView fitHeight="135.0" fitWidth="360.0" pickOnBounds="true" preserveRatio="true">
                       <image>
-                          <Image url="@../images/bottom-dec.png" />
+                          <Image url="@assets/images/bottom-dec.png" />
                       </image>
                   </ImageView>
           </children>
@@ -29,7 +29,7 @@
                            <children>
                                <ImageView fitHeight="16.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                                    <image>
-                                       <Image url="@../images/crown-white.png" />
+                                       <Image url="@assets/images/crown-white.png" />
                                    </image>
                                    <HBox.margin>
                                        <Insets>
@@ -54,7 +54,7 @@
                            <children>
                                <ImageView onMouseClicked="#closeMenuClicked" fitHeight="16.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                                    <image>
-                                       <Image url="@../images/menu-icon.png" />
+                                       <Image url="@assets/images/menu-icon.png" />
                                    </image>
                                </ImageView>
                            </children>
