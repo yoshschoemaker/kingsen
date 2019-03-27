@@ -43,7 +43,8 @@ public class GameController extends Controller {
     private void cardChosen(Event event) {
         Button btn = (Button) event.getSource();
         Card card = (Card) btn.getUserData();
-        btn.setVisible(false);
+        //btn.setVisible(false);
+        cardsContainer.getChildren().remove(btn);
 
         if (!game.isGameOver()) {
             if (card.isNumberCard()) {
