@@ -1,8 +1,8 @@
 package ui;
 
-import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
@@ -73,6 +73,15 @@ public class selectPlayersController implements Initializable {
             public void handle(ActionEvent event) {
                 var eventSrc  = event.getSource();
                 Button button = (Button) eventSrc;
+
+                // Get the value of the 'button'. Can be used to remove the player
+                List children = ((HBox) button.getParent()).getChildren();
+                Button textButton = ((Button) children.get(0));
+                String buttonText = textButton.getText();
+                
+                // You can use buttonText to delete the value from the players array (which is left to implement).
+                //System.out.print(buttonText);
+
                 HBox row = (HBox) button.getParent();
                 ((VBox) row.getParent()).getChildren().remove(row);
             }
