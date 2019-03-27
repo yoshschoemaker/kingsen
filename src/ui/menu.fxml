@@ -72,7 +72,7 @@
                    </font>
                    <VBox.margin>
                        <Insets>
-                           <top>80</top>
+                           <top>20</top>
                            <bottom>40</bottom>
                        </Insets>
                    </VBox.margin>
@@ -106,17 +106,17 @@
 
            <Text fill="WHITE" text="1. Aron 2pts" textAlignment="CENTER" wrappingWidth="360.0">
                <font>
-                   <Font name="Open Sans Bold" size="14.0" />
+                   <Font name="Open Sans Regular" size="14.0" />
                </font>
            </Text>
            <Text fill="WHITE" text="2. Henk 8pts" textAlignment="CENTER" wrappingWidth="360.0">
                <font>
-                   <Font name="Open Sans Bold" size="14.0" />
+                   <Font name="Open Sans Regular" size="14.0" />
                </font>
            </Text>
            <Text fill="WHITE" text="3. Yosh 22pts" textAlignment="CENTER" wrappingWidth="360.0">
                <font>
-                   <Font name="Open Sans Bold" size="14.0" />
+                   <Font name="Open Sans Regular" size="14.0" />
                </font>
            </Text>
 

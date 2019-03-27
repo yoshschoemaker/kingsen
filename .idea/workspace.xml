@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4cada829-d9a5-49fc-8f35-bd6640b4e4dd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ui/menu.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/menuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/card.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/card.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/cardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/cardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/game.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/game.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/gameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/gameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/givePenalty.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/givePenalty.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/givePenaltyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/givePenaltyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/menu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/style.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,11 +17,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ui/menu.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="102" column="28" lean-forward="true" selection-start-line="102" selection-start-column="28" selection-end-line="102" selection-end-column="28" />
+            <state relative-caret-position="282">
+              <caret line="115" column="18" lean-forward="true" selection-start-line="115" selection-start-column="18" selection-end-line="115" selection-end-column="18" />
             </state>
           </provider>
           <provider editor-type-id="JavaFX-Scene-Builder" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ui/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="40" column="26" lean-forward="true" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -59,7 +61,6 @@
         <option value="$PROJECT_DIR$/src/ui/startController.java" />
         <option value="$PROJECT_DIR$/src/ui/start.fxml" />
         <option value="$PROJECT_DIR$/src/ui/selectPlayers.fxml" />
-        <option value="$PROJECT_DIR$/src/ui/style.css" />
         <option value="$PROJECT_DIR$/src/ui/information.fxml" />
         <option value="$PROJECT_DIR$/src/ui/Main.java" />
         <option value="$PROJECT_DIR$/src/ui/settings.fxml" />
@@ -70,6 +71,7 @@
         <option value="$PROJECT_DIR$/src/ui/game.fxml" />
         <option value="$PROJECT_DIR$/src/ui/card.fxml" />
         <option value="$PROJECT_DIR$/src/ui/givePenalty.fxml" />
+        <option value="$PROJECT_DIR$/src/ui/style.css" />
         <option value="$PROJECT_DIR$/src/ui/menu.fxml" />
       </list>
     </option>
@@ -118,7 +120,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553713746923" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553713913775" />
     <property name="last_opened_file_path" value="C:/Program Files/Java/javafx-jmods-11.0.2" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Problems" />
@@ -189,7 +191,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32400000" />
+    <option name="totallyTimeSpent" value="32563000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -303,13 +305,6 @@
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="73" column="38" lean-forward="true" selection-start-line="73" selection-start-column="38" selection-end-line="73" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ui/settings.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="149">
@@ -394,10 +389,17 @@
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="40" column="26" lean-forward="true" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ui/menu.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="102" column="28" lean-forward="true" selection-start-line="102" selection-start-column="28" selection-end-line="102" selection-end-column="28" />
+        <state relative-caret-position="282">
+          <caret line="115" column="18" lean-forward="true" selection-start-line="115" selection-start-column="18" selection-end-line="115" selection-end-column="18" />
         </state>
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
