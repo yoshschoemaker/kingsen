@@ -1,17 +1,16 @@
 package ui;
 
-import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
+import Kingsen.Controller;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.stage.Stage;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 
-public class gameController implements Initializable {
+import java.io.IOException;
+
+public class gameController extends Controller {
 
     /**
      * Will be called on a card click,
@@ -43,10 +42,5 @@ public class gameController implements Initializable {
 
         window.setScene(startViewScene);
         window.show();
-    }
-
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-
     }
 }

@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.text.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="360.0" style="-fx-background-color: #3F4FA5;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.givePenaltyController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="360.0" style="-fx-background-color: #3F4FA5;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.givePenaltyController">
    <children>
 
        <VBox alignment="BOTTOM_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="360.0" spacing="8.0" VBox.vgrow="ALWAYS">
@@ -52,7 +56,7 @@
 
                        <HBox alignment="TOP_RIGHT">
                            <children>
-                               <ImageView onMouseClicked="#openMenuClicked" fitHeight="16.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                               <ImageView fitHeight="16.0" fitWidth="32.0" onMouseClicked="#openMenuClicked" pickOnBounds="true" preserveRatio="true">
                                    <image>
                                        <Image url="@assets/images/menu-icon.png" />
                                    </image>
@@ -66,7 +70,7 @@
                </HBox>
                <!-- // Menu and kings -->
 
-               <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Who got a penalty point?" textAlignment="CENTER" wrappingWidth="360.0">
+               <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Who's got a penalty point?" textAlignment="CENTER" wrappingWidth="360.0">
                    <font>
                        <Font name="Open Sans Bold" size="24.0" />
                    </font>
@@ -77,22 +81,22 @@
                        </Insets>
                    </VBox.margin>
                </Text>
-             <Button mnemonicParsing="false" styleClass="button" onMouseClicked="#continueClicked" stylesheets="@style.css" text="Henk" textFill="WHITE">
+             <Button mnemonicParsing="false" onMouseClicked="#continueClicked" styleClass="button" stylesheets="@style.css" text="Henk" textFill="WHITE">
                 <font>
                    <Font name="Open Sans ExtraBold" size="14.0" />
                 </font>
              </Button>
-             <Button mnemonicParsing="false" styleClass="button" onMouseClicked="#continueClicked" stylesheets="@style.css" text="Aron" textFill="WHITE">
+             <Button mnemonicParsing="false" onMouseClicked="#continueClicked" styleClass="button" stylesheets="@style.css" text="Aron" textFill="WHITE">
                 <font>
                    <Font name="Open Sans ExtraBold" size="14.0" />
                 </font>
              </Button>
-             <Button mnemonicParsing="false" styleClass="button" onMouseClicked="#continueClicked" stylesheets="@style.css" text="Yosh" textFill="WHITE">
+             <Button mnemonicParsing="false" onMouseClicked="#continueClicked" styleClass="button" stylesheets="@style.css" text="Yosh" textFill="WHITE">
                 <font>
                    <Font name="Open Sans ExtraBold" size="14.0" />
                 </font>
              </Button>
-             <Button mnemonicParsing="false" styleClass="cancelBtn" onMouseClicked="#continueClicked" stylesheets="@style.css" text="Skip" textFill="WHITE">
+             <Button mnemonicParsing="false" onMouseClicked="#continueClicked" styleClass="cancelBtn" stylesheets="@style.css" text="Skip" textFill="WHITE">
                 <font>
                    <Font name="Open Sans ExtraBold" size="14.0" />
                 </font>

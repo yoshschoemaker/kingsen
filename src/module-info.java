@@ -5,7 +5,6 @@ module Kingsen {
     requires java.desktop;
     requires javafx.fxml;
     requires javafx.base;
-    requires kotlin.stdlib;
     opens Kingsen;
     opens ui;
 }

@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import ui.startController;
 
 public class Main extends Application {
 
@@ -14,11 +15,11 @@ public class Main extends Application {
         Game game = new Game();
         game.init();
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("Main-no-styling.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/ui/start.fxml"));
         Parent root = loader.load();
-        IntroController introController = loader.getController();
-        introController.setGame(game);
-        introController.setCurrStage(primaryStage);
+        startController startController = loader.getController();
+        startController.setGame(game);
+        startController.setCurrStage(primaryStage);
         primaryStage.setTitle("Kingsen App");
         primaryStage.setResizable(false);
         primaryStage.setScene(new Scene(root));
