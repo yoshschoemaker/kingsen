@@ -85,22 +85,8 @@
 
                <ScrollPane hbarPolicy="NEVER" prefHeight="180.0" prefWidth="328.0" stylesheets="@style.css" vbarPolicy="AS_NEEDED">
                    <content>
-                       <VBox alignment="CENTER" maxWidth="-Infinity" prefWidth="328.0" spacing="8.0">
-                           <Button mnemonicParsing="false" onMouseClicked="#continueClicked" styleClass="button" stylesheets="@style.css" text="Henk" textFill="WHITE">
-                               <font>
-                                   <Font name="Open Sans ExtraBold" size="14.0" />
-                               </font>
-                           </Button>
-                           <Button mnemonicParsing="false" onMouseClicked="#continueClicked" styleClass="button" stylesheets="@style.css" text="Aron" textFill="WHITE">
-                               <font>
-                                   <Font name="Open Sans ExtraBold" size="14.0" />
-                               </font>
-                           </Button>
-                           <Button mnemonicParsing="false" onMouseClicked="#continueClicked" styleClass="button" stylesheets="@style.css" text="Yosh" textFill="WHITE">
-                               <font>
-                                   <Font name="Open Sans ExtraBold" size="14.0" />
-                               </font>
-                           </Button>
+                       <VBox fx:id="playerContainer" alignment="CENTER" maxWidth="-Infinity" prefWidth="328.0" spacing="8.0">
+
                        </VBox>
                    </content>
                </ScrollPane>

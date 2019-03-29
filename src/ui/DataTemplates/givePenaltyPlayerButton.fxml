@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.text.Font?>
+<Button mnemonicParsing="false" styleClass="button" stylesheets="@../style.css" text="Player" textFill="WHITE">
+    <font>
+        <Font name="Open Sans ExtraBold" size="14.0" />
+    </font>
+</Button>

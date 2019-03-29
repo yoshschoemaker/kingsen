@@ -44,7 +44,7 @@ public class CardDeckRuleDecorator extends CardDeckDecorator {
                                 "Deze kaart mag maar 1 keer gebruikt worden tijdens het spel. Deze kaart hoeft niet direct ingezet te worden.");
                         break;
                     case 6:
-                        card.getRule().setRuleTitle("Opdracht gegeven");
+                        card.getRule().setRuleTitle("Opdracht geven");
                         card.getRule().setDescription("Geef een opdracht aan speler. Voorbeelden: opdrukken, rondjes draaien, etc.");
                         break;
                     case 7:

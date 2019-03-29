@@ -7,6 +7,7 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 
 public class cardController extends Controller {
@@ -26,6 +27,9 @@ public class cardController extends Controller {
     @FXML
     private ImageView cardTypeImage;
 
+    @FXML
+    private VBox cardVbox;
+
     @Override
     public void afterInitialization() {
         if (card != null) {
@@ -39,7 +43,12 @@ public class cardController extends Controller {
                 cardNumberOrFace.setText(card.getFace().toString());
             }
 
-            System.out.println(card.getType().toString().toLowerCase());
+            String typeLowercased = card.getType().toString().toLowerCase();
+
+            cardVbox.getStyleClass().removeAll();
+            cardVbox.getStyleClass().add("card");
+            cardVbox.getStyleClass().add(typeLowercased);
+
             cardTypeImage.setImage(new Image(getClass().getResourceAsStream("assets/images/" + card.getType().toString().toLowerCase() + ".png")));
         }
     }
@@ -57,6 +66,6 @@ public class cardController extends Controller {
     }
 
     public void openMenuClicked(MouseEvent event) {
-        switchScene("menu");
+        switchSceneWithCard("menu", card);
     }
 }

@@ -41,7 +41,7 @@ public class Game implements Observable {
                 System.out.println(String.format("%3$s %2$s card with rule: '%1$s'", card.getRule().getRuleTitle(), card.getFace(), card.getType()));
             }
         }*/
-            System.out.println(cards.size() + " have been generated");
+            System.out.println(cards.size() + " cards have been generated");
             System.out.println("--- FINISHED GENERATING THE CARD DECK ---");
 
             System.out.println("--- SETTING UP TURN OBJECT ---");

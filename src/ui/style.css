@@ -73,10 +73,25 @@
 }
 
 .card{
-    -fx-background-image: url("assets/images/hearts-bg.png");
     -fx-background-position: left top;
     -fx-background-repeat: no-repeat;
     -fx-background-size: contain;
+}
+
+.card.hearts {
+    -fx-background-image: url("assets/images/hearts-bg.png");
+}
+
+.card.diamonds {
+    -fx-background-image: url("assets/images/diamonds-bg.png");
+}
+
+.card.spades {
+    -fx-background-image: url("assets/images/spades-bg.png");
+}
+
+.card.clubs {
+    -fx-background-image: url("assets/images/clubs-bg.png");
 }
 
 .playerAddBtn{

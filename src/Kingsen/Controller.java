@@ -2,17 +2,23 @@ package Kingsen;
 
 import Kingsen.Build.Card;
 import Kingsen.Game.Game;
+import Kingsen.Helpers.ConsoleColors;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ArrayList;
 
 public abstract class Controller {
 
     protected Stage currStage;
     protected Game game;
     protected Card card;
+    protected ArrayList<String> previousFxmls;
 
     public void switchScene(String fxmlFileName) {
         try {
@@ -21,6 +27,8 @@ public abstract class Controller {
             Controller currController = loader.getController();
             currController.setGame(game);
             currController.setCurrStage(currStage);
+            currController.setPreviousFxmls(previousFxmls);
+            currController.previousFxmls.add(fxmlFileName);
             currStage.setScene(scene);
             currController.afterInitialization();
         } catch (IOException ex) {
@@ -35,12 +43,31 @@ public abstract class Controller {
             Controller currController = loader.getController();
             currController.setGame(game);
             currController.setCurrStage(currStage);
+            currController.setPreviousFxmls(previousFxmls);
+            currController.previousFxmls.add(fxmlFileName);
             currController.setCard(card);
             currStage.setScene(scene);
             currController.afterInitialization();
         } catch (IOException ex) {
             ex.printStackTrace();
         }
+    }
+
+    public void switchToPreviousScene() {
+        if (previousFxmls.size() > 1) {
+            String prev = (previousFxmls.get(previousFxmls.size() - 2));
+            if (card != null) {
+                switchSceneWithCard(prev, card);
+            } else {
+                switchScene(prev);
+            }
+        } else {
+            System.out.println(ConsoleColors.RED + "There is no previous scene!" + ConsoleColors.RESET);
+        }
+    }
+
+    public void setPreviousFxmls(ArrayList<String> previousFxmls) {
+        this.previousFxmls = previousFxmls;
     }
 
     public void setCard(Card card) {

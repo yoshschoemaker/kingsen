@@ -7,6 +7,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -16,6 +17,9 @@ public class givePenaltyController extends Controller {
 
     @FXML
     private Text kingsLeftToFind;
+
+    @FXML
+    private VBox playerContainer;
 
     @Override
     public void afterInitialization() {
