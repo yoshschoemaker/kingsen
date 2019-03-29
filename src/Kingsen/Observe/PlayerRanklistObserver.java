@@ -5,6 +5,11 @@ import Kingsen.Game.Player;
 
 import java.util.*;
 
+/**
+ * This Observer class observes the scores of all the Players
+ * and puts them in a separate ArrayList in the Game class
+ * ordered from lowest to highest score
+ */
 public class PlayerRanklistObserver extends Observer {
 
     private Game game;

@@ -4,6 +4,11 @@ import Kingsen.Build.Card;
 import Kingsen.Game.Game;
 import Kingsen.Game.Player;
 
+/**
+ * This Command class picks a card that is given in the constructor
+ * and then removes it from the Game class to move it to the Player who
+ * picked that card
+ */
 public class CardChosenCommand implements Command {
 
     private Game game;

@@ -43,6 +43,12 @@ public class Game implements Observable {
         command.execute();
     }
 
+    /**
+     * This function is only used for the console
+     *
+     * @deprecated Nothing useful
+     */
+    @Deprecated
     public void getPlayerNames() {
         for (Player player : players) {
             System.out.println(player.getName());
@@ -57,7 +63,7 @@ public class Game implements Observable {
         return turn;
     }
 
-    public boolean drinkModeEnabled() {
+    public boolean isDrinkModeEnabled() {
         return drinkMode;
     }
 

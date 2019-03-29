@@ -12,6 +12,9 @@ import javafx.scene.layout.VBox;
 
 import java.io.IOException;
 
+/**
+ * @deprecated This was a test class and is no longer in use. It should be ignored!
+ */
 public class GameController extends Controller {
 
     @FXML

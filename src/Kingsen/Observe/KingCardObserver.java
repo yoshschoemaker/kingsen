@@ -4,6 +4,10 @@ import Kingsen.Build.Card;
 import Kingsen.Build.Face;
 import Kingsen.Game.Game;
 
+/**
+ * This Observer class keep tracks of how many King cards there are left in the Game
+ * and sets the amount of King cards left
+ */
 public class KingCardObserver extends Observer {
 
     private Game game;

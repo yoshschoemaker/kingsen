@@ -3,6 +3,10 @@ package Kingsen.Command;
 import Kingsen.Game.Game;
 import Kingsen.Game.Player;
 
+/**
+ * This Command class adds 1 to the score of the
+ * referenced player
+ */
 public class SelectLoserCommand implements Command {
 
     private Game game;
