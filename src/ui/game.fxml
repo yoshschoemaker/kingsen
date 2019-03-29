@@ -66,7 +66,7 @@
             </HBox>
             <!-- // Menu and kings -->
 
-            <Text fill="WHITE" text="Aron's turn" textAlignment="CENTER">
+            <Text fill="WHITE" text="Aron's turn" textAlignment="CENTER" fx:id="playerTurnName">
                <font>
                   <Font name="Open Sans Bold" size="24.0" />
                </font>

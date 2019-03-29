@@ -21,10 +21,14 @@ public class gameController extends Controller {
     @FXML
     private Text kingsLeftToFind;
 
+    @FXML
+    private Text playerTurnName;
+
     @Override
     public void afterInitialization() {
         game.start();
         kingsLeftToFind.setText(Integer.toString(game.getKingsLeft()));
+        playerTurnName.setText(game.getTurn().getCurrentPlayer().getName() + "'s turn");
 
         if (game.isGameOver()) {
             System.out.println(ConsoleColors.RED + "GAME OVER!" + ConsoleColors.RESET);
