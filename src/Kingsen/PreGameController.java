@@ -15,6 +15,9 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
+/**
+ * @deprecated This was a test class and is no longer in use. It should be ignored!
+ */
 public class PreGameController extends Controller {
 
     @FXML

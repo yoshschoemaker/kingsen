@@ -12,7 +12,9 @@ import javafx.stage.Stage;
 import java.awt.event.ActionEvent;
 import java.io.IOException;
 
-
+/**
+ * @deprecated This was a test class and is no longer in use. It should be ignored!
+ */
 public class IntroController extends Controller {
 
     @FXML

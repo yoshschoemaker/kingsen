@@ -2,6 +2,9 @@ package Kingsen.Command;
 
 import Kingsen.Game.*;
 
+/**
+ * This Command class adds a player to the player list in the Game class
+ */
 public class AddPlayerCommand implements Command {
 
     private Game game;

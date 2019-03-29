@@ -4,7 +4,6 @@ import Kingsen.Build.Card;
 import Kingsen.Build.Face;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class CardDeckRuleDecorator extends CardDeckDecorator {
 
