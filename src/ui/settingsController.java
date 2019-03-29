@@ -16,8 +16,8 @@ public class settingsController extends Controller {
      * When this method is called, it will change the Scene to
      * the settings menu
      */
-    public void backButtonPushed(MouseEvent event) throws IOException
+    public void backButtonPushed(MouseEvent event)
     {
-        switchScene("start");
+        switchScene("start-responsive");
     }
 }

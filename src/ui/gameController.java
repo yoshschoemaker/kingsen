@@ -2,6 +2,7 @@ package ui;
 
 import Kingsen.Build.Card;
 import Kingsen.Command.CardChosenCommand;
+import Kingsen.Command.StartGameCommand;
 import Kingsen.Controller;
 import Kingsen.Helpers.ConsoleColors;
 import javafx.event.Event;
@@ -26,7 +27,8 @@ public class gameController extends Controller {
 
     @Override
     public void afterInitialization() {
-        game.start();
+        game.executeCommand(new StartGameCommand(game));
+
         kingsLeftToFind.setText(Integer.toString(game.getKingsLeft()));
         playerTurnName.setText(game.getTurn().getCurrentPlayer().getName() + "'s turn");
 

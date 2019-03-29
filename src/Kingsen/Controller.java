@@ -23,7 +23,7 @@ public abstract class Controller {
     public void switchScene(String fxmlFileName) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFileName + ".fxml"));
-            Scene scene = new Scene(loader.load());
+            Scene scene = new Scene(loader.load(), currStage.getScene().getWidth(), currStage.getScene().getHeight());
             Controller currController = loader.getController();
             currController.setGame(game);
             currController.setCurrStage(currStage);

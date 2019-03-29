@@ -18,16 +18,18 @@ public class Main extends Application {
         ArrayList<String> previousFxmls = new ArrayList<>();
         game.init();
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/ui/start.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/ui/start-responsive.fxml"));
         Parent root = loader.load();
         startController startController = loader.getController();
         startController.setGame(game);
         startController.setCurrStage(primaryStage);
         startController.setPreviousFxmls(previousFxmls);
+        primaryStage.setMinWidth(340);
+        primaryStage.setMinHeight(500);
         primaryStage.setTitle("Kingsen App");
-        //primaryStage.setResizable(false);
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
+
     }
 
     public static void main(String[] args) {

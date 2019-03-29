@@ -19,7 +19,7 @@ public class startController extends Controller {
      */
     public void settingsButtonPushed(MouseEvent event) throws IOException
     {
-        switchScene("settings");
+        switchScene("settings-responsive");
     }
 
     /**
