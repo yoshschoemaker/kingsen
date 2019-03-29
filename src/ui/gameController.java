@@ -1,7 +1,7 @@
 package ui;
 
 import Kingsen.Build.Card;
-import Kingsen.Command.NextTurnCommand;
+import Kingsen.Command.CardChosenCommand;
 import Kingsen.Controller;
 import Kingsen.Helpers.ConsoleColors;
 import javafx.event.Event;
@@ -66,15 +66,11 @@ public class gameController extends Controller {
 
         System.out.println(String.format("%1$s: %2$s", card.getRule().getRuleTitle(), card.getRule().getDescription()));
 
-        // game.executeCommand(new SelectLoserCommand(game, game.getTurn().getCurrentPlayer()));
-        game.executeCommand(new NextTurnCommand(game, card));
         System.out.println(ConsoleColors.BLUE + game.getTurn().getCurrentPlayer().getName() + "'s turn now - " + game.getKingsLeft() + " king card(s) left." + ConsoleColors.RESET);
 
-        switchSceneWithCard("card", card);
+        game.executeCommand(new CardChosenCommand(game, card));
 
-        /*for (Player player : game.getPlayerRanklist()) {
-            System.out.println(player.toString());
-        }*/
+        switchSceneWithCard("card", card);
     }
 
     public void openMenuClicked(MouseEvent event) {

@@ -28,6 +28,7 @@ public class CardDeckRuleDecorator extends CardDeckDecorator {
                         card.getRule().setDescription("Deel een slok uit aan een andere speler.");
                         break;
                     case 3:
+                        card.getProperties().setSelfPenalty(true);
                         card.getRule().setRuleTitle("Slok nemen");
                         card.getRule().setDescription("Neem zelf een slok.");
                         break;
@@ -39,6 +40,7 @@ public class CardDeckRuleDecorator extends CardDeckDecorator {
                         break;
                     case 5:
                         card.getProperties().setPlayable(true);
+                        card.getProperties().setPenaltyEnabled(false);
                         card.getRule().setRuleTitle("Plaskaart");
                         card.getRule().setDescription("De speler die deze kaart pakt mag naar de wc. " +
                                 "Deze kaart mag maar 1 keer gebruikt worden tijdens het spel. Deze kaart hoeft niet direct ingezet te worden.");
@@ -54,15 +56,18 @@ public class CardDeckRuleDecorator extends CardDeckDecorator {
                                 "genoemd worden. Wordt een van die getallen wel genoemd, dan neemt de noemer van dat getal een slok.");
                         break;
                     case 8:
+                        card.getProperties().setPenaltyEnabled(false);
                         card.getRule().setRuleTitle("Regel maken");
                         card.getRule().setDescription("Verzin een regel. Iedereen moet zich aan die regel houden. Doet iemand dat niet, " +
                                 "dan neemt diegene een slok. Voorbeeld: Er mogen geen namen meer worden genoemd.");
                         break;
                     case 9:
+                        card.getProperties().setPenaltyEnabled(false);
                         card.getRule().setRuleTitle("Regel afschaffen");
                         card.getRule().setDescription("Er mag 1 regel worden afgeschaft indien er regels zijn.");
                         break;
                     case 10:
+                        card.getProperties().setPenaltyEnabled(false);
                         card.getRule().setRuleTitle("QUIZMASTERRRRR!");
                         card.getRule().setDescription("Iedere speler die aan jou vragen stelt, moet een slok nemen. Jij bent geen Quizmaster meer " +
                                 "als een andere speler een kaart met nummer 10 pakt.");
@@ -78,20 +83,23 @@ public class CardDeckRuleDecorator extends CardDeckDecorator {
 
             if (card.getFace() == Face.QUEEN) {
                 card.getProperties().setPlayable(true);
+                card.getProperties().setPenaltyEnabled(false);
                 card.getRule().setRuleTitle("Rise of the Queen");
                 card.getRule().setDescription("Op een willekeurig moment mag jij je hand in de lucht steken terwijl je 'rise of the queen' roept. " +
                         "Elke speler moet jou volgen. De laatste die dit doet, moet een slok nemen.");
             }
 
             if (card.getFace() == Face.KING) {
+                card.getProperties().setPenaltyEnabled(false);
                 card.getRule().setRuleTitle("Stapelen");
                 card.getRule().setDescription("Leg de Koning op het shotglas. Is dit de laatste Koning? Dan mag jij het shotglaasje leegdrinken " +
                         "en ben jij de winnaar! Het spel is dan ten einde.");
             }
 
             if (card.getFace() == Face.ACE) {
-                card.getRule().setRuleTitle("Richting draaien");
-                card.getRule().setDescription("De richting van het pakken van kaarten wordt nu omgedraaid!");
+                card.getProperties().setSelfPenalty(true);
+                card.getRule().setRuleTitle("SHOTJUHHHHH!");
+                card.getRule().setDescription("Drink een shotje.");
             }
         }
 
