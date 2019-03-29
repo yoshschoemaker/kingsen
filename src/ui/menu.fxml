@@ -87,7 +87,7 @@
                    <Font name="Open Sans ExtraBold" size="14.0" />
                 </font>
              </Button>
-             <Button mnemonicParsing="false" styleClass="button" stylesheets="@style.css" text="Quit game" textFill="WHITE">
+             <Button mnemonicParsing="false" styleClass="button" onMouseClicked="#quitGameClicked" stylesheets="@style.css" text="Quit game" textFill="WHITE">
                 <font>
                    <Font name="Open Sans ExtraBold" size="14.0" />
                 </font>
