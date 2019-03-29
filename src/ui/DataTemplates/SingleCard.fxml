@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+
+<?import javafx.scene.layout.HBox?>
+
+<HBox>
+    <ImageView fitHeight="200.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../assets/images/card-bg.png"/>
+        </image>
+    </ImageView>
+</HBox>

@@ -1,46 +1,58 @@
 package ui;
 
+import Kingsen.Build.Type;
 import Kingsen.Controller;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
+import javafx.fxml.FXML;
+import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-import javafx.stage.Stage;
-
-import java.io.IOException;
+import javafx.scene.text.Text;
 
 public class cardController extends Controller {
+
+    @FXML
+    private Text ruleTitle;
+
+    @FXML
+    private Label ruleDescription;
+
+    @FXML
+    private Text cardNumberOrFace;
+
+    @FXML
+    private Text kingsLeftToFind;
+
+    @FXML
+    private ImageView cardTypeImage;
+
+    @Override
+    public void afterInitialization() {
+        if (card != null) {
+            ruleTitle.setText(card.getRule().getRuleTitle());
+            ruleDescription.setText(card.getRule().getDescription());
+            kingsLeftToFind.setText(Integer.toString(game.getKingsLeft()));
+
+            if (card.isNumberCard()) {
+                cardNumberOrFace.setText(Integer.toString(card.getNumber()));
+            } else {
+                cardNumberOrFace.setText(card.getFace().toString());
+            }
+
+            System.out.println(card.getType().toString().toLowerCase());
+            cardTypeImage.setImage(new Image(getClass().getResourceAsStream("assets/images/" + card.getType().toString().toLowerCase() + ".png")));
+        }
+    }
 
     /**
      * Will be called when the 'continue' button is clicked
      * will either refer to 'select loser' screen or the 'game' screen.
      */
-    public void continueClicked(MouseEvent event) throws IOException
-    {
-        // Handle the continue button clicked
-
-        Parent startViewParent = FXMLLoader.load(getClass().getResource("givePenalty.fxml"));
-        Scene startViewScene = new Scene(startViewParent);
-
-        // This line gets the Stage information
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-
-        window.setScene(startViewScene);
-        window.show();
+    public void continueClicked(MouseEvent event) {
+        switchScene("givePenalty");
     }
 
-    public void openMenuClicked(MouseEvent event) throws IOException
-    {
-        // Handle card clicked
-
-        Parent startViewParent = FXMLLoader.load(getClass().getResource("menu.fxml"));
-        Scene startViewScene = new Scene(startViewParent);
-
-        // This line gets the Stage information
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-
-        window.setScene(startViewScene);
-        window.show();
+    public void openMenuClicked(MouseEvent event) {
+        switchScene("menu");
     }
 }

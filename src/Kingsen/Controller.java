@@ -1,5 +1,6 @@
 package Kingsen;
 
+import Kingsen.Build.Card;
 import Kingsen.Game.Game;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -11,6 +12,7 @@ public abstract class Controller {
 
     protected Stage currStage;
     protected Game game;
+    protected Card card;
 
     public void switchScene(String fxmlFileName) {
         try {
@@ -20,11 +22,29 @@ public abstract class Controller {
             currController.setGame(game);
             currController.setCurrStage(currStage);
             currStage.setScene(scene);
-
             currController.afterInitialization();
         } catch (IOException ex) {
             ex.printStackTrace();
         }
+    }
+
+    public void switchSceneWithCard(String fxmlFileName, Card card) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFileName + ".fxml"));
+            Scene scene = new Scene(loader.load());
+            Controller currController = loader.getController();
+            currController.setGame(game);
+            currController.setCurrStage(currStage);
+            currController.setCard(card);
+            currStage.setScene(scene);
+            currController.afterInitialization();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    public void setCard(Card card) {
+        this.card = card;
     }
 
     public void setGame(Game game) {
@@ -36,7 +56,7 @@ public abstract class Controller {
     }
 
     /**
-     * To be called after after initializing
+     * To be called after initializing the controller
      */
     public void afterInitialization() {
         // Do whatever you want
