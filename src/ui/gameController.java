@@ -32,7 +32,7 @@ public class gameController extends Controller {
 
         if (game.isGameOver()) {
             System.out.println(ConsoleColors.RED + "GAME OVER!" + ConsoleColors.RESET);
-            switchScene("start");
+            switchScene("gameOver");
             return;
         }
 

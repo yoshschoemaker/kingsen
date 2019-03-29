@@ -29,33 +29,13 @@ public class Game implements Observable {
     public void start() {
         if (!started) {
             System.out.println("--- NEW GAME STARTED ---");
-
             CardDeckDecorator cardDeck = new CardDeckRuleDecorator(new CardDeckShuffleDecorator(new CardDeck()));
-
-            System.out.println("--- STARTED GENERATING THE CARD DECK ---");
             cards = cardDeck.generateCardDeck();
-        /*for (Card card : cards) {
-            if (card.isNumberCard()) {
-                System.out.println(String.format("%3$s %2$s (%4$s) card with rule: '%1$s'", card.getRule().getRuleTitle(), card.getFace(), card.getType(), card.getNumber()));
-            } else {
-                System.out.println(String.format("%3$s %2$s card with rule: '%1$s'", card.getRule().getRuleTitle(), card.getFace(), card.getType()));
-            }
-        }*/
-            System.out.println(cards.size() + " cards have been generated");
-            System.out.println("--- FINISHED GENERATING THE CARD DECK ---");
-
-            System.out.println("--- SETTING UP TURN OBJECT ---");
             this.turn = new Turn(players);
-            System.out.println("--- TURN OBJECT SET ---");
-
-            System.out.println("--- SETTING UP END GAME OBSERVER ---");
             new KingCardObserver(this);
             notifyAllObservers();
-            System.out.println("--- END GAME OBSERVER IS SET AND NOTIFIED ---");
-
             started = true;
-
-            System.out.println(ConsoleColors.GREEN + "\n--- GAME STARTED! HAVE FUN PLAYING ---" + ConsoleColors.RESET);
+            System.out.println(ConsoleColors.GREEN + "--- GAME IS SET UP! HAVE FUN PLAYING ---" + ConsoleColors.RESET);
         }
     }
 
@@ -121,6 +101,10 @@ public class Game implements Observable {
 
     public boolean isStarted() {
         return started;
+    }
+
+    public void setStarted(boolean started) {
+        this.started = started;
     }
 
     @Override

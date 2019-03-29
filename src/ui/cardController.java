@@ -31,12 +31,16 @@ public class cardController extends Controller {
     @FXML
     private VBox cardVbox;
 
+    @FXML
+    private Text hasPickedCardText;
+
     @Override
     public void afterInitialization() {
         if (card != null) {
             ruleTitle.setText(card.getRule().getRuleTitle());
             ruleDescription.setText(card.getRule().getDescription());
             kingsLeftToFind.setText(Integer.toString(game.getKingsLeft()));
+            hasPickedCardText.setText(game.getTurn().getCurrentPlayer().getName() + " has picked this card");
 
             if (card.isNumberCard()) {
                 cardNumberOrFace.setText(Integer.toString(card.getNumber()));

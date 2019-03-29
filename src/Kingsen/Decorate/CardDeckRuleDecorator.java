@@ -18,6 +18,7 @@ public class CardDeckRuleDecorator extends CardDeckDecorator {
     }
 
     // TODO (sometime?): redo implementation with something like JSON or a Game Rule class
+    // Haven't had time to do so, sadly
     private ArrayList<Card> addCardRules(ArrayList<Card> cards) {
 
         for (Card card : cards) {
@@ -60,7 +61,7 @@ public class CardDeckRuleDecorator extends CardDeckDecorator {
                         break;
                     case 10:
                         card.getRule().setRuleTitle("Never have I ever");
-                        card.getRule().setDescription("Everyone hold up 3 fingers. The person who drew this card says a sentence starting with ‘Never have I ever..’ and completes with something he/she hasn’t done. Whoever has done it, lowers one finger. First person to lowers all fingers gets the penalty.");
+                        card.getRule().setDescription("Everyone holds up 3 fingers. The person who drew this card says a sentence starting with ‘Never have I ever..’ and completes with something he/she hasn’t done. Whoever has done it, lowers one finger. First person to lowers all fingers gets the penalty.");
                         break;
                 }
             }
