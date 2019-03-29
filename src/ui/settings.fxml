@@ -34,6 +34,12 @@
                     </VBox.margin>
                 </Text>
 
+                <Label prefHeight="80.0" prefWidth="254.0" text="When drinking mode is implemented, it can be turned on/off here." textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font name="Open Sans SemiBold" size="12.0" />
+                    </font>
+                </Label>
+
                 <Button layoutX="90.0" layoutY="385.0" mnemonicParsing="false" onMouseClicked="#backButtonPushed" stylesheets="@style.css" text="Back" textFill="WHITE">
                     <font>
                         <Font name="Open Sans ExtraBold" size="14.0" />
@@ -49,7 +55,8 @@
                 <Text fill="WHITE" text=" Kingsen © 2019">
                     <font>
                         <Font name="Open Sans SemiBold" size="12.0" />
-                    </font></Text>
+                    </font>
+                </Text>
                 <Text fill="WHITE" text="Aron Soppe &amp; Yosh Schoemaker">
                     <font>
                         <Font name="Open Sans SemiBold" size="12.0" />
