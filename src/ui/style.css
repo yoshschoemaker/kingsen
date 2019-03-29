@@ -1,0 +1,118 @@
+.button{
+    -fx-fill: white;
+    -fx-font-size: 14;
+    -fx-background-color: #FD6592;
+    -fx-background-radius: 15px;
+    -fx-pref-width: 180px;
+    -fx-padding: 10px;
+    -fx-font-weight: bold;
+}
+
+.playerBlock{
+    -fx-text-fill: white;
+    -fx-background-color: transparent;
+    -fx-background-radius: 15px;
+    -fx-border-radius: 15px;
+    -fx-border-width: 1px;
+    -fx-border-color: white;
+    -fx-pref-width: 140px;
+    -fx-padding: 10px;
+    -fx-font-weight: bold;
+}
+
+.playerAddBlock{
+    -fx-fill: white;
+    -fx-font-size: 14;
+    -fx-background-color: #FD6592;
+    -fx-background-radius: 15px;
+    -fx-padding: 10px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-pref-width: 140px;
+    -fx-prompt-text-fill: white;
+}
+
+.cancelBtn {
+    -fx-text-fill: white;
+    -fx-background-color: transparent;
+    -fx-background-radius: 15px;
+    -fx-border-radius: 15px;
+    -fx-border-width: 1px;
+    -fx-border-color: white;
+    -fx-pref-width: 180px;
+    -fx-padding: 10px;
+    -fx-font-weight: bold;
+    -fx-fill: white;
+    -fx-font-size: 14;
+}
+
+.scroll-pane {
+    -fx-background-color: #3F4FA5;
+}
+
+.scroll-bar:horizontal, .scroll-bar:vertical{
+    -fx-background-color: transparent;
+}
+
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+}
+
+.scroll-pane > .viewport  {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color: white;
+    -fx-background-radius: 5em;
+    -fx-opacity: 0.08;
+}
+
+.card{
+    -fx-background-position: center top;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: contain;
+}
+
+.card.hearts {
+    -fx-background-image: url("assets/images/hearts-bg.png");
+}
+
+.card.diamonds {
+    -fx-background-image: url("assets/images/diamonds-bg.png");
+}
+
+.card.spades {
+    -fx-background-image: url("assets/images/spades-bg.png");
+}
+
+.card.clubs {
+    -fx-background-image: url("assets/images/clubs-bg.png");
+}
+
+.playerAddBtn{
+    -fx-fill: white;
+    -fx-font-size: 14;
+    -fx-background-color: #FD6592;
+    -fx-background-radius: 15px;
+    -fx-padding: 10px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-pref-width: 40px;
+}
+
+.playerRemoveBtn{
+    -fx-text-fill: white;
+    -fx-background-color: transparent;
+    -fx-background-radius: 15px;
+    -fx-border-radius: 15px;
+    -fx-border-width: 1px;
+    -fx-border-color: white;
+    -fx-pref-width: 40px;
+    -fx-padding: 10px;
+    -fx-font-weight: bold;
+}

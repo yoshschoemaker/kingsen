@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.stage.Screen?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="${screen.visualBounds.height}" prefWidth="${screen.visualBounds.width}" style="-fx-background-color: #3F4FA5;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.givePenaltyController">
+    <fx:define>
+        <Screen fx:factory="getPrimary" fx:id="screen"/>
+    </fx:define>
+    <children>
+
+       <VBox alignment="BOTTOM_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="${screen.visualBounds.height}" prefWidth="${screen.visualBounds.width}" spacing="8.0" VBox.vgrow="ALWAYS">
+          <children>
+                  <ImageView fitHeight="135.0" fitWidth="${screen.visualBounds.width}" pickOnBounds="true" preserveRatio="true">
+                      <image>
+                          <Image url="@assets/images/bottom-dec.png" />
+                      </image>
+                  </ImageView>
+          </children>
+       </VBox>
+
+       <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="${screen.visualBounds.height}" prefWidth="${screen.visualBounds.width}" spacing="8.0">
+           <children>
+
+               <!-- Menu and kings -->
+               <HBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="${screen.visualBounds.width}">
+                   <children>
+                       <HBox alignment="TOP_LEFT" HBox.hgrow="ALWAYS">
+                           <children>
+                               <ImageView fitHeight="16.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                   <image>
+                                       <Image url="@assets/images/crown-white.png" />
+                                   </image>
+                                   <HBox.margin>
+                                       <Insets>
+                                           <right>8</right>
+                                       </Insets>
+                                   </HBox.margin>
+                               </ImageView>
+                               <Text fx:id="kingsLeftToFind" fill="WHITE" text="4">
+                                   <font>
+                                       <Font name="Open Sans ExtraBold" size="14.0" />
+                                   </font>
+                                   <HBox.margin>
+                                       <Insets>
+                                           <top>-2.5</top>
+                                       </Insets>
+                                   </HBox.margin>
+                               </Text>
+                           </children>
+                       </HBox>
+
+                       <HBox alignment="TOP_RIGHT">
+                           <children>
+                               <ImageView fitHeight="16.0" fitWidth="32.0" onMouseClicked="#openMenuClicked" pickOnBounds="true" preserveRatio="true">
+                                   <image>
+                                       <Image url="@assets/images/menu-icon.png" />
+                                   </image>
+                               </ImageView>
+                           </children>
+                       </HBox>
+                   </children>
+                   <padding>
+                       <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                   </padding>
+               </HBox>
+               <!-- // Menu and kings -->
+
+               <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Who's got a penalty point?" textAlignment="CENTER" wrappingWidth="${screen.visualBounds.width}">
+                   <font>
+                       <Font name="Open Sans Bold" size="24.0" />
+                   </font>
+                   <VBox.margin>
+                       <Insets>
+                           <top>80</top>
+                           <bottom>40</bottom>
+                       </Insets>
+                   </VBox.margin>
+               </Text>
+
+               <ScrollPane hbarPolicy="NEVER" prefHeight="180.0" prefWidth="${screen.visualBounds.width}" stylesheets="@style.css" vbarPolicy="AS_NEEDED">
+                   <content>
+                       <VBox fx:id="playerContainer" alignment="CENTER" maxWidth="-Infinity" prefWidth="${screen.visualBounds.width}" spacing="8.0">
+
+                       </VBox>
+                   </content>
+                   <VBox.margin>
+                       <Insets>
+                           <left>-16</left>
+                       </Insets>
+                   </VBox.margin>
+               </ScrollPane>
+
+             <Button mnemonicParsing="false" onMouseClicked="#continueClicked" styleClass="cancelBtn" stylesheets="@style.css" text="Skip" textFill="WHITE">
+                <font>
+                   <Font name="Open Sans ExtraBold" size="14.0" />
+                </font>
+                 <VBox.margin>
+                     <Insets>
+                         <top>20</top>
+                     </Insets>
+                 </VBox.margin>
+             </Button>
+           </children>
+           <padding>
+               <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+           </padding>
+       </VBox>
+   </children>
+
+</Pane>

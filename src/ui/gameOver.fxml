@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.stage.Screen?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="${screen.visualBounds.height}" prefWidth="${screen.visualBounds.width}" style="-fx-background-color: #3F4FA5;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.gameOverController">
+    <fx:define>
+        <Screen fx:factory="getPrimary" fx:id="screen"/>
+    </fx:define>
+    <children>
+
+       <VBox alignment="BOTTOM_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="${screen.visualBounds.height}" prefWidth="${screen.visualBounds.width}" spacing="8.0" VBox.vgrow="ALWAYS">
+          <children>
+                  <ImageView fitHeight="135.0" fitWidth="${screen.visualBounds.width}" pickOnBounds="true" preserveRatio="true">
+                      <image>
+                          <Image url="@assets/images/bottom-dec.png" />
+                      </image>
+                  </ImageView>
+          </children>
+       </VBox>
+
+       <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="${screen.visualBounds.height}" prefWidth="${screen.visualBounds.width}" spacing="8.0">
+           <children>
+
+               <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Game over" textAlignment="CENTER" wrappingWidth="${screen.visualBounds.width}">
+                   <font>
+                       <Font name="Open Sans Bold" size="24.0" />
+                   </font>
+                   <VBox.margin>
+                       <Insets>
+                           <top>80</top>
+                           <bottom>20</bottom>
+                       </Insets>
+                   </VBox.margin>
+               </Text>
+
+           <Text fill="WHITE" text="Ranking" textAlignment="CENTER" wrappingWidth="${screen.visualBounds.width}">
+               <font>
+                   <Font name="Open Sans Bold" size="16.0" />
+               </font>
+               <VBox.margin>
+                   <Insets>
+                       <top>40</top>
+                   </Insets>
+               </VBox.margin>
+           </Text>
+
+           <ScrollPane hbarPolicy="NEVER" prefHeight="120.0" prefWidth="${screen.visualBounds.width}" stylesheets="@style.css" vbarPolicy="AS_NEEDED">
+               <content>
+                   <VBox fx:id="playerRankingContainer" prefWidth="${screen.visualBounds.width}" maxWidth="-Infinity" alignment="CENTER">
+                   </VBox>
+               </content>
+               <VBox.margin>
+                   <Insets>
+                       <left>-16</left>
+                       <bottom>20</bottom>
+                   </Insets>
+               </VBox.margin>
+           </ScrollPane>
+
+           <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="154.0" layoutY="446.0" onMouseClicked="#continueClicked" pickOnBounds="true" preserveRatio="true">
+               <image>
+                   <Image url="@assets/images/btn-play.png" />
+               </image>
+           </ImageView>
+
+           </children>
+           <padding>
+               <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+           </padding>
+       </VBox>
+   </children>
+
+</Pane>

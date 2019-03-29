@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import javafx.stage.Screen?>
+
+<Pane minWidth="-Infinity" prefHeight="${screen.visualBounds.height}" prefWidth="${screen.visualBounds.width}" style="-fx-background-color: #3F4FA5;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.startController">
+   <fx:define>
+      <Screen fx:factory="getPrimary" fx:id="screen"/>
+   </fx:define>
+   <children>
+
+      <VBox alignment="BOTTOM_CENTER" prefHeight="${screen.visualBounds.height}" prefWidth="${screen.visualBounds.width}" spacing="8.0" VBox.vgrow="ALWAYS">
+         <children>
+            <ImageView fitHeight="135.0" fitWidth="${screen.visualBounds.width}" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/images/bottom-dec.png" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+
+      <VBox alignment="CENTER" prefHeight="${screen.visualBounds.height}" prefWidth="${screen.visualBounds.width}" spacing="8.0">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Kingsen" textAlignment="CENTER">
+               <font>
+                  <Font name="Open Sans Bold" size="48.0" />
+               </font>
+               <VBox.margin>
+                  <Insets>
+                     <top>-80</top>
+                     <bottom>80</bottom>
+                  </Insets>
+               </VBox.margin>
+            </Text>
+            <HBox alignment="CENTER" spacing="16.0">
+               <children>
+                  <ImageView fitHeight="55.0" fitWidth="55.0" onMouseClicked="#settingsButtonPushed" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assets/images/btn-settings.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="startButton" fitHeight="90.0" onMouseClicked="#startButtonPushed" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assets/images/btn-play.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="55.0" fitWidth="55.0" onMouseClicked="#informationButtonPushed" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assets/images/btn-info.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+         </padding>
+      </VBox>
+
+   </children>
+</Pane>

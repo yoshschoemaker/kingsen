@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.stage.Screen?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="${screen.visualBounds.height}" prefWidth="${screen.visualBounds.width}" style="-fx-background-color: #3F4FA5;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.informationController">
+    <fx:define>
+        <Screen fx:factory="getPrimary" fx:id="screen"/>
+    </fx:define>
+    <children>
+
+        <VBox alignment="BOTTOM_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="${screen.visualBounds.height}" prefWidth="${screen.visualBounds.width}" spacing="8.0" VBox.vgrow="ALWAYS">
+            <children>
+                <ImageView fitHeight="135.0" fitWidth="${screen.visualBounds.width}" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@assets/images/bottom-dec.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </VBox>
+
+        <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="${screen.visualBounds.height}" prefWidth="${screen.visualBounds.width}" spacing="8.0">
+            <children>
+
+                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Information" textAlignment="CENTER" wrappingWidth="${screen.visualBounds.width}">
+                    <font>
+                        <Font name="Open Sans Bold" size="24.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets>
+                            <top>40</top>
+                            <bottom>20</bottom>
+                        </Insets>
+                    </VBox.margin>
+                </Text>
+
+                <Label prefHeight="280.0" prefWidth="254.0" text="Kingsen (Kings Cup) has been a popular game for many parties over the generations. It is originally a card game, made into a mobile app by us. For school purposes the app is made with penalty points. When the last king is pulled from the deck, the ranking will appear and the player with the least (penalty) points will win the game. If you decide to drink in this game, exchange penalty points with sips of alcoholic beverage. You should also put a cup on the table, and whenever a king is pulled you can pour in a random drink. The player who pulls the last king will have to drink the cup. Oh and it’s not allowed to go to the toilet without a toilet card! :)" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font name="Open Sans SemiBold" size="12.0" />
+                    </font>
+                </Label>
+
+                <Button mnemonicParsing="false" onMouseClicked="#backButtonPushed" stylesheets="@style.css" text="Back" textFill="WHITE">
+                    <font>
+                        <Font name="Open Sans ExtraBold" size="14.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets>
+                            <top>40</top>
+                        </Insets>
+                    </VBox.margin>
+                </Button>
+
+            </children>
+            <padding>
+                <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+            </padding>
+        </VBox>
+    </children>
+
+</Pane>
