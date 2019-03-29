@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
@@ -82,7 +85,7 @@
 
                <ScrollPane hbarPolicy="NEVER" prefHeight="180.0" prefWidth="328.0" stylesheets="@style.css" vbarPolicy="AS_NEEDED">
                    <content>
-                       <VBox prefWidth="328.0" maxWidth="-Infinity" alignment="CENTER">
+                       <VBox alignment="CENTER" maxWidth="-Infinity" prefWidth="328.0" spacing="8.0">
                            <Button mnemonicParsing="false" onMouseClicked="#continueClicked" styleClass="button" stylesheets="@style.css" text="Henk" textFill="WHITE">
                                <font>
                                    <Font name="Open Sans ExtraBold" size="14.0" />

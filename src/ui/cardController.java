@@ -49,7 +49,11 @@ public class cardController extends Controller {
      * will either refer to 'select loser' screen or the 'game' screen.
      */
     public void continueClicked(MouseEvent event) {
-        switchScene("givePenalty");
+        if (card.getProperties().isPlayable()) {
+            switchScene("game");
+        } else {
+            switchScene("givePenalty");
+        }
     }
 
     public void openMenuClicked(MouseEvent event) {

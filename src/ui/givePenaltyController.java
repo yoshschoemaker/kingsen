@@ -26,11 +26,11 @@ public class givePenaltyController extends Controller {
      * Will be called when the 'continue' button is clicked
      * will either refer to 'select loser' screen or the 'game' screen.
      */
-    public void continueClicked(MouseEvent event) throws IOException {
+    public void continueClicked(MouseEvent event) {
         switchScene("game");
     }
 
-    public void openMenuClicked(MouseEvent event) throws IOException {
+    public void openMenuClicked(MouseEvent event) {
         switchScene("menu");
     }
 }
