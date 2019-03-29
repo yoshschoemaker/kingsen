@@ -88,7 +88,7 @@
                      </Insets>
                   </VBox.margin>
                </Text>
-               <Label fx:id="ruleDescription" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard." textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <Label fx:id="ruleDescription" prefWidth="254.0" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard." textAlignment="CENTER" textFill="WHITE" wrapText="true">
                   <font>
                      <Font name="Open Sans SemiBold" size="12.0" />
                   </font>
