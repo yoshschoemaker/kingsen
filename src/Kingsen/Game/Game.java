@@ -29,7 +29,7 @@ public class Game implements Observable {
     public void start() {
         if (!started) {
             System.out.println("--- NEW GAME STARTED ---");
-            CardDeckDecorator cardDeck = new CardDeckRuleDecorator(new CardDeckShuffleDecorator(new CardDeck()));
+            CardDeckDecorator cardDeck = new CardDeckRuleDecorator(new CardDeck());
             cards = cardDeck.generateCardDeck();
             this.turn = new Turn(players);
             new KingCardObserver(this);

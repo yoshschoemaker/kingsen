@@ -25,7 +25,7 @@ public class Main extends Application {
         startController.setCurrStage(primaryStage);
         startController.setPreviousFxmls(previousFxmls);
         primaryStage.setTitle("Kingsen App");
-        primaryStage.setResizable(false);
+        //primaryStage.setResizable(false);
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }

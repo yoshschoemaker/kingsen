@@ -9,13 +9,17 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
+<?import javafx.stage.Screen?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="360.0" style="-fx-background-color: #3F4FA5;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.informationController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="${screen.visualBounds.height}" prefWidth="${screen.visualBounds.width}" style="-fx-background-color: #3F4FA5;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.informationController">
+    <fx:define>
+        <Screen fx:factory="getPrimary" fx:id="screen"/>
+    </fx:define>
     <children>
 
-        <VBox alignment="BOTTOM_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="360.0" spacing="8.0" VBox.vgrow="ALWAYS">
+        <VBox alignment="BOTTOM_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="${screen.visualBounds.height}" prefWidth="${screen.visualBounds.width}" spacing="8.0" VBox.vgrow="ALWAYS">
             <children>
-                <ImageView fitHeight="135.0" fitWidth="360.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fitHeight="135.0" fitWidth="${screen.visualBounds.width}" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@assets/images/bottom-dec.png" />
                     </image>
@@ -23,10 +27,10 @@
             </children>
         </VBox>
 
-        <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="360.0" spacing="8.0">
+        <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="${screen.visualBounds.height}" prefWidth="${screen.visualBounds.width}" spacing="8.0">
             <children>
 
-                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Information" textAlignment="CENTER" wrappingWidth="360.0">
+                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Information" textAlignment="CENTER" wrappingWidth="${screen.visualBounds.width}">
                     <font>
                         <Font name="Open Sans Bold" size="24.0" />
                     </font>
