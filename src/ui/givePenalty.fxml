@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
@@ -81,21 +79,29 @@
                        </Insets>
                    </VBox.margin>
                </Text>
-             <Button mnemonicParsing="false" onMouseClicked="#continueClicked" styleClass="button" stylesheets="@style.css" text="Henk" textFill="WHITE">
-                <font>
-                   <Font name="Open Sans ExtraBold" size="14.0" />
-                </font>
-             </Button>
-             <Button mnemonicParsing="false" onMouseClicked="#continueClicked" styleClass="button" stylesheets="@style.css" text="Aron" textFill="WHITE">
-                <font>
-                   <Font name="Open Sans ExtraBold" size="14.0" />
-                </font>
-             </Button>
-             <Button mnemonicParsing="false" onMouseClicked="#continueClicked" styleClass="button" stylesheets="@style.css" text="Yosh" textFill="WHITE">
-                <font>
-                   <Font name="Open Sans ExtraBold" size="14.0" />
-                </font>
-             </Button>
+
+               <ScrollPane hbarPolicy="NEVER" prefHeight="180.0" prefWidth="328.0" stylesheets="@style.css" vbarPolicy="AS_NEEDED">
+                   <content>
+                       <VBox prefWidth="328.0" maxWidth="-Infinity" alignment="CENTER">
+                           <Button mnemonicParsing="false" onMouseClicked="#continueClicked" styleClass="button" stylesheets="@style.css" text="Henk" textFill="WHITE">
+                               <font>
+                                   <Font name="Open Sans ExtraBold" size="14.0" />
+                               </font>
+                           </Button>
+                           <Button mnemonicParsing="false" onMouseClicked="#continueClicked" styleClass="button" stylesheets="@style.css" text="Aron" textFill="WHITE">
+                               <font>
+                                   <Font name="Open Sans ExtraBold" size="14.0" />
+                               </font>
+                           </Button>
+                           <Button mnemonicParsing="false" onMouseClicked="#continueClicked" styleClass="button" stylesheets="@style.css" text="Yosh" textFill="WHITE">
+                               <font>
+                                   <Font name="Open Sans ExtraBold" size="14.0" />
+                               </font>
+                           </Button>
+                       </VBox>
+                   </content>
+               </ScrollPane>
+
              <Button mnemonicParsing="false" onMouseClicked="#continueClicked" styleClass="cancelBtn" stylesheets="@style.css" text="Skip" textFill="WHITE">
                 <font>
                    <Font name="Open Sans ExtraBold" size="14.0" />

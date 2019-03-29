@@ -104,21 +104,27 @@
                </VBox.margin>
            </Text>
 
-           <Text fill="WHITE" text="1. Aron 2pts" textAlignment="CENTER" wrappingWidth="360.0">
-               <font>
-                   <Font name="Open Sans Regular" size="14.0" />
-               </font>
-           </Text>
-           <Text fill="WHITE" text="2. Henk 8pts" textAlignment="CENTER" wrappingWidth="360.0">
-               <font>
-                   <Font name="Open Sans Regular" size="14.0" />
-               </font>
-           </Text>
-           <Text fill="WHITE" text="3. Yosh 22pts" textAlignment="CENTER" wrappingWidth="360.0">
-               <font>
-                   <Font name="Open Sans Regular" size="14.0" />
-               </font>
-           </Text>
+           <ScrollPane hbarPolicy="NEVER" prefHeight="120.0" prefWidth="328.0" stylesheets="@style.css" vbarPolicy="AS_NEEDED">
+               <content>
+                   <VBox prefWidth="328.0" maxWidth="-Infinity" alignment="CENTER">
+                       <Text fill="WHITE" text="1. Aron 2pts" textAlignment="CENTER">
+                           <font>
+                               <Font name="Open Sans Regular" size="14.0" />
+                           </font>
+                       </Text>
+                       <Text fill="WHITE" text="2. Henk 8pts" textAlignment="CENTER">
+                           <font>
+                               <Font name="Open Sans Regular" size="14.0" />
+                           </font>
+                       </Text>
+                       <Text fill="WHITE" text="3. Yosh 22pts" textAlignment="CENTER">
+                           <font>
+                               <Font name="Open Sans Regular" size="14.0" />
+                           </font>
+                       </Text>
+                   </VBox>
+               </content>
+           </ScrollPane>
 
            </children>
            <padding>
