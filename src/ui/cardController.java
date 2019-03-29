@@ -1,6 +1,7 @@
 package ui;
 
-import Kingsen.Build.Type;
+import Kingsen.Command.NextTurnCommand;
+import Kingsen.Command.SelectLoserCommand;
 import Kingsen.Controller;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -58,10 +59,19 @@ public class cardController extends Controller {
      * will either refer to 'select loser' screen or the 'game' screen.
      */
     public void continueClicked(MouseEvent event) {
-        if (card.getProperties().isPlayable()) {
+
+        if (!card.getProperties().isPenaltyEnabled()) {
+            game.executeCommand(new NextTurnCommand(game));
             switchScene("game");
         } else {
-            switchScene("givePenalty");
+            if (card.getProperties().isSelfPenalty()) {
+                game.executeCommand(new SelectLoserCommand(game, game.getTurn().getCurrentPlayer()));
+                game.executeCommand(new NextTurnCommand(game));
+                switchScene("game");
+            } else {
+                game.executeCommand(new NextTurnCommand(game));
+                switchScene("givePenalty");
+            }
         }
     }
 

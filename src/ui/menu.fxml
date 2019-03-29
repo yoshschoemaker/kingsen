@@ -81,7 +81,7 @@
                        </Insets>
                    </VBox.margin>
                </Text>
-             <Button mnemonicParsing="false" styleClass="button" onMouseClicked="#givePenaltyClicked" stylesheets="@style.css" text="Give penalty" textFill="WHITE">
+             <Button fx:id="givePenaltyBtn" mnemonicParsing="false" styleClass="button" onMouseClicked="#givePenaltyClicked" stylesheets="@style.css" text="Give penalty" textFill="WHITE">
                 <font>
                    <Font name="Open Sans ExtraBold" size="14.0" />
                 </font>
@@ -110,22 +110,8 @@
 
            <ScrollPane hbarPolicy="NEVER" prefHeight="120.0" prefWidth="${screen.visualBounds.width}" stylesheets="@style.css" vbarPolicy="AS_NEEDED">
                <content>
-                   <VBox prefWidth="${screen.visualBounds.width}" maxWidth="-Infinity" alignment="CENTER">
-                       <Text fill="WHITE" text="1. Aron 2pts" textAlignment="CENTER">
-                           <font>
-                               <Font name="Open Sans Regular" size="14.0" />
-                           </font>
-                       </Text>
-                       <Text fill="WHITE" text="2. Henk 8pts" textAlignment="CENTER">
-                           <font>
-                               <Font name="Open Sans Regular" size="14.0" />
-                           </font>
-                       </Text>
-                       <Text fill="WHITE" text="3. Yosh 22pts" textAlignment="CENTER">
-                           <font>
-                               <Font name="Open Sans Regular" size="14.0" />
-                           </font>
-                       </Text>
+                   <VBox fx:id="playerRankingContainer" prefWidth="${screen.visualBounds.width}" maxWidth="-Infinity" alignment="CENTER">
+
                    </VBox>
                </content>
                <VBox.margin>

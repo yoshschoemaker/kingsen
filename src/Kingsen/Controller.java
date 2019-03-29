@@ -55,15 +55,18 @@ public abstract class Controller {
 
     public void switchToPreviousScene() {
         if (previousFxmls.size() > 1) {
-            String prev = (previousFxmls.get(previousFxmls.size() - 2));
             if (card != null) {
-                switchSceneWithCard(prev, card);
+                switchSceneWithCard(getPreviousSceneName(), card);
             } else {
-                switchScene(prev);
+                switchScene(getPreviousSceneName());
             }
         } else {
             System.out.println(ConsoleColors.RED + "There is no previous scene!" + ConsoleColors.RESET);
         }
+    }
+
+    public String getPreviousSceneName() {
+        return previousFxmls.get(previousFxmls.size() - 2);
     }
 
     public void setPreviousFxmls(ArrayList<String> previousFxmls) {
