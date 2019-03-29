@@ -29,6 +29,7 @@
     -fx-font-weight: bold;
     -fx-text-fill: white;
     -fx-pref-width: 140px;
+    -fx-prompt-text-fill: white;
 }
 
 .cancelBtn {
