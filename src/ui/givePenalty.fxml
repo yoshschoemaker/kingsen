@@ -74,7 +74,7 @@
                    </VBox.margin>
                </Text>
 
-               <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" maxWidth="300.0" prefWidth="300.0" stylesheets="@style.css" vbarPolicy="AS_NEEDED">
+               <ScrollPane hbarPolicy="NEVER" prefHeight="100.0" maxWidth="300.0" prefWidth="300.0" stylesheets="@style.css" vbarPolicy="AS_NEEDED">
                    <content>
                        <VBox fx:id="playerContainer" alignment="TOP_CENTER" maxWidth="-Infinity" prefHeight="200.0" prefWidth="286.0" spacing="8.0">
 
@@ -82,7 +82,7 @@
                    </content>
                    <padding>
                        <!-- Weird fix -->
-                       <Insets left="6.0"/>
+                       <Insets left="4.0"/>
                    </padding>
                </ScrollPane>
 
