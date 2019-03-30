@@ -43,6 +43,7 @@ public class CardDeckRuleDecorator extends CardDeckDecorator {
                         card.getRule().setDescription("Congratulations! You may go to the toilet for one time with this card. Use whenever you like.");
                         break;
                     case 6:
+                        card.getProperties().setPlayable(true);
                         card.getRule().setRuleTitle("Assignment");
                         card.getRule().setDescription("Choose an action a player has to make before or after drinking. When a player doesn’t perform this action, he gets a penalty.");
                         break;
@@ -56,7 +57,7 @@ public class CardDeckRuleDecorator extends CardDeckDecorator {
                         break;
                     case 9:
                         card.getRule().setRuleTitle("Floor");
-                        card.getRule().setDescription("Last person to touch the floor gets the penalty!!1!!! PANIC");
+                        card.getRule().setDescription("Last person to touch the floor gets the penalty!!1!!! PANIC!1!");
                         break;
                     case 10:
                         card.getRule().setRuleTitle("Never have I ever");
@@ -79,12 +80,14 @@ public class CardDeckRuleDecorator extends CardDeckDecorator {
             }
 
             if (card.getFace() == Face.KING) {
+                card.getProperties().setPlayable(true);
                 card.getProperties().setPenaltyEnabled(false);
                 card.getRule().setRuleTitle("Nicknames");
                 card.getRule().setDescription("Give someone a nickname. Whenever and whoever someone doesn’t call him/her by his/her nickname gets a penalty.");
             }
 
             if (card.getFace() == Face.ACE) {
+                card.getProperties().setPlayable(true);
                 card.getProperties().setPenaltyEnabled(false);
                 card.getRule().setRuleTitle("Snake eyes");
                 card.getRule().setDescription("No one can look you in the eyes until another ace is picked. Whenever someone looks in your eyes, they receive a penalty point. While you would think it sucks to be the out casted snake eyes, it actually provides an opportunity to get the other players very drunk by tricking them into looking at you.");
