@@ -6,125 +6,121 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-<?import javafx.stage.Screen?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="${screen.visualBounds.height}" prefWidth="${screen.visualBounds.width}" style="-fx-background-color: #3F4FA5;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.cardController">
-   <fx:define>
-      <Screen fx:factory="getPrimary" fx:id="screen"/>
-   </fx:define>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="450.0" minWidth="320.0" prefHeight="480.0" prefWidth="320.0" style="-fx-background-color: #3F4FA5;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.cardController">
    <children>
 
-      <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="${screen.visualBounds.height}" prefWidth="${screen.visualBounds.width}" spacing="8.0">
+      <VBox alignment="BOTTOM_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="96.0" prefWidth="320.0" spacing="8.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
+            <ImageView fitHeight="125.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/images/bottom-dec.png" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
 
-            <!-- Menu and kings -->
-            <HBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="${screen.visualBounds.width}">
-               <children>
-                  <HBox alignment="TOP_LEFT" prefHeight="6.0" prefWidth="312.0" HBox.hgrow="ALWAYS">
-                     <children>
-                        <ImageView fitHeight="16.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@assets/images/crown-white.png" />
-                           </image>
-                           <HBox.margin>
-                              <Insets>
-                                 <right>8</right>
-                              </Insets>
-                           </HBox.margin>
-                        </ImageView>
-                        <Text fx:id="kingsLeftToFind" fill="WHITE" text="4">
-                           <font>
-                              <Font name="Open Sans ExtraBold" size="14.0" />
-                           </font>
-                           <HBox.margin>
-                              <Insets>
-                                 <top>-2.5</top>
-                              </Insets>
-                           </HBox.margin>
-                        </Text>
-                     </children>
-                  </HBox>
+      <HBox alignment="TOP_CENTER" AnchorPane.topAnchor="16.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <Text fx:id="hasPickedCardText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="... has picked this card">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+         </Text>
+      </HBox>
 
-                  <HBox alignment="TOP_RIGHT">
-                     <children>
-                        <ImageView fitHeight="16.0" fitWidth="32.0" onMouseClicked="#openMenuClicked" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@assets/images/menu-icon.png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </HBox>
-               </children>
-               <padding>
-                  <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
-               </padding>
-            </HBox>
-            <Text fx:id="hasPickedCardText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Yosh has picked this card">
+      <HBox alignment="TOP_LEFT" AnchorPane.leftAnchor="16.0" AnchorPane.topAnchor="16.0">
+         <children>
+            <ImageView fitHeight="16.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/images/crown-white.png" />
+               </image>
+               <HBox.margin>
+                  <Insets>
+                     <right>8</right>
+                  </Insets>
+               </HBox.margin>
+            </ImageView>
+            <Text fx:id="kingsLeftToFind" fill="WHITE" text="4">
                <font>
-                  <Font name="System Bold" size="12.0" />
+                  <Font name="Open Sans ExtraBold" size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets>
+                     <top>-2.5</top>
+                  </Insets>
+               </HBox.margin>
+            </Text>
+         </children>
+      </HBox>
+
+      <HBox alignment="TOP_RIGHT" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="16.0">
+         <children>
+            <ImageView fitHeight="16.0" fitWidth="32.0" onMouseClicked="#openMenuClicked" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/images/menu-icon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+
+      <VBox fx:id="cardVbox" alignment="CENTER" stylesheets="@style.css" VBox.vgrow="ALWAYS" maxHeight="400" maxWidth="500" minWidth="320.0" prefHeight="480.0" prefWidth="320.0" spacing="8.0" AnchorPane.bottomAnchor="32.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="48.0">
+         <children>
+            <ImageView fx:id="cardTypeImage" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/images/hearts.png" />
+               </image>
+               <VBox.margin>
+                  <Insets>
+                     <top>20</top>
+                  </Insets>
+               </VBox.margin>
+            </ImageView>
+            <Text fx:id="cardNumberOrFace" fill="#fd6592" text="6" textAlignment="CENTER">
+               <font>
+                  <Font name="Open Sans ExtraBold" size="24.0" />
                </font>
             </Text>
-            <!-- // Menu and kings -->
 
-            <VBox fx:id="cardVbox" alignment="CENTER" stylesheets="@style.css" VBox.vgrow="ALWAYS">
+            <Text fx:id="ruleTitle" fill="WHITE" text="Rule title">
+               <font>
+                  <Font name="Open Sans ExtraBold" size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets>
+                     <top>20</top>
+                  </Insets>
+               </VBox.margin>
+            </Text>
+            <Label fx:id="ruleDescription" prefHeight="100.0" prefWidth="230.0" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard." textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Open Sans SemiBold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets>
+                     <top>15</top>
+                     <bottom>20</bottom>
+                  </Insets>
+               </VBox.margin>
+            </Label>
 
-               <ImageView fx:id="cardTypeImage" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@assets/images/hearts.png" />
-                  </image>
-               </ImageView>
-               <Text fx:id="cardNumberOrFace" fill="#fd6592" text="6" textAlignment="CENTER">
-                  <font>
-                     <Font name="Open Sans ExtraBold" size="24.0" />
-                  </font>
-               </Text>
-
-               <Text fx:id="ruleTitle" fill="WHITE" text="Rule title">
-                  <font>
-                     <Font name="Open Sans ExtraBold" size="16.0" />
-                  </font>
-                  <VBox.margin>
-                     <Insets>
-                        <top>20</top>
-                     </Insets>
-                  </VBox.margin>
-               </Text>
-               <Label fx:id="ruleDescription" prefWidth="254.0" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard." textAlignment="CENTER" textFill="WHITE" wrapText="true">
-                  <font>
-                     <Font name="Open Sans SemiBold" size="12.0" />
-                  </font>
-                  <VBox.margin>
-                     <Insets>
-                        <top>15</top>
-                        <bottom>40</bottom>
-                     </Insets>
-                  </VBox.margin>
-               </Label>
-
-               <ImageView fx:id="startButton" fitHeight="54.0" fitWidth="54.0" onMouseClicked="#continueClicked" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@assets/images/btn-play.png" />
-                  </image>
-               </ImageView>
-
-               <padding>
-                  <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
-               </padding>
-               <styleClass>
-                  <String fx:value="card" />
-                  <String fx:value="hearts" />
-               </styleClass>
-            </VBox>
+            <ImageView fx:id="startButton" fitHeight="60.0" fitWidth="60" onMouseClicked="#continueClicked" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/images/btn-play.png" />
+               </image>
+            </ImageView>
 
          </children>
          <padding>
             <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
          </padding>
+         <styleClass>
+            <String fx:value="card" />
+            <String fx:value="hearts" />
+         </styleClass>
       </VBox>
    </children>
-
-</Pane>
+</AnchorPane>

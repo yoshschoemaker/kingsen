@@ -73,7 +73,7 @@
 }
 
 .card{
-    -fx-background-position: center top;
+    -fx-background-position: center center;
     -fx-background-repeat: no-repeat;
     -fx-background-size: contain;
 }

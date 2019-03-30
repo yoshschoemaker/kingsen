@@ -108,7 +108,7 @@
                </VBox.margin>
            </Text>
 
-           <ScrollPane hbarPolicy="NEVER" prefHeight="120.0" prefWidth="${screen.visualBounds.width}" stylesheets="@style.css" vbarPolicy="AS_NEEDED">
+           <ScrollPane hbarPolicy="NEVER" prefHeight="100.0" prefWidth="${screen.visualBounds.width}" stylesheets="@style.css" vbarPolicy="AS_NEEDED">
                <content>
                    <VBox fx:id="playerRankingContainer" prefWidth="${screen.visualBounds.width}" maxWidth="-Infinity" alignment="CENTER">
 
