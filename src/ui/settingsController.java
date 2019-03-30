@@ -11,6 +11,6 @@ public class settingsController extends Controller {
      */
     public void backButtonPushed(MouseEvent event)
     {
-        switchScene("start-responsive");
+        switchScene("start");
     }
 }

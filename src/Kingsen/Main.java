@@ -19,7 +19,7 @@ public class Main extends Application {
         ArrayList<String> previousFxmls = new ArrayList<>();
         game.init();
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/ui/start-responsive.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/ui/start.fxml"));
         Parent root = loader.load();
         startController startController = loader.getController();
         startController.setGame(game);
