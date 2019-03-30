@@ -27,7 +27,7 @@
         <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="390.0" prefWidth="344.0" spacing="8.0" AnchorPane.bottomAnchor="128.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
 
-                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Information" textAlignment="CENTER" wrappingWidth="360.0">
+                <Text fill="WHITE" text="Information" textAlignment="CENTER" wrappingWidth="320.0">
                     <font>
                         <Font name="Open Sans Bold" size="24.0" />
                     </font>
