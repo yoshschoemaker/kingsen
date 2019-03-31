@@ -18,6 +18,7 @@ import javafx.scene.layout.VBox;
 /**
  * @deprecated This was a test class and is no longer in use. It should be ignored!
  */
+@Deprecated
 public class PreGameController extends Controller {
 
     @FXML

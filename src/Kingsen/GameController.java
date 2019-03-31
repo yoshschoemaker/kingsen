@@ -15,6 +15,7 @@ import java.io.IOException;
 /**
  * @deprecated This was a test class and is no longer in use. It should be ignored!
  */
+@Deprecated
 public class GameController extends Controller {
 
     @FXML
