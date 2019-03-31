@@ -32,7 +32,6 @@ public class startController extends Controller {
      */
     public void startButtonPushed(MouseEvent event) throws IOException
     {
-        System.out.println(ConsoleColors.YELLOW + "Switching to Player Select screen." + ConsoleColors.RESET);
         switchScene("selectPlayers");
     }
 }

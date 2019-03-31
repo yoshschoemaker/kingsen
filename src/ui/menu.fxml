@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.text.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="450.0" minWidth="320.0" prefHeight="480.0" prefWidth="320.0" style="-fx-background-color: #3F4FA5;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.menuController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="450.0" minWidth="320.0" prefHeight="480.0" prefWidth="320.0" style="-fx-background-color: #3F4FA5;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.menuController">
     <children>
 
         <VBox alignment="BOTTOM_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="96.0" prefWidth="320.0" spacing="8.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
@@ -50,11 +56,17 @@
                     <image>
                         <Image url="@assets/images/menu-icon.png" />
                     </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
                 </ImageView>
             </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
         </HBox>
 
-        <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity"  minHeight="450.0" minWidth="320.0" prefHeight="480.0" prefWidth="320.0" spacing="8.0" AnchorPane.bottomAnchor="128.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <VBox alignment="CENTER" layoutY="47.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="305.0" minWidth="320.0" prefHeight="305.0" prefWidth="320.0" spacing="8.0" AnchorPane.bottomAnchor="128.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="47.0">
             <children>
 
 
@@ -69,20 +81,29 @@
                         </Insets>
                     </VBox.margin>
                 </Text>
-                <Button fx:id="givePenaltyBtn" mnemonicParsing="false" styleClass="button" onMouseClicked="#givePenaltyClicked" stylesheets="@style.css" text="Give penalty" textFill="WHITE">
+                <Button fx:id="givePenaltyBtn" mnemonicParsing="false" onMouseClicked="#givePenaltyClicked" styleClass="button-hover" stylesheets="@style.css" text="Give penalty" textFill="WHITE">
                     <font>
                         <Font name="Open Sans ExtraBold" size="14.0" />
                     </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
                 </Button>
-                <Button mnemonicParsing="false" styleClass="button" onMouseClicked="#closeMenuClicked" stylesheets="@style.css" text="Close menu" textFill="WHITE">
+                <Button mnemonicParsing="false" onMouseClicked="#closeMenuClicked" styleClass="button-hover" stylesheets="@style.css" text="Close menu" textFill="WHITE">
                     <font>
                         <Font name="Open Sans ExtraBold" size="14.0" />
                     </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
                 </Button>
-                <Button mnemonicParsing="false" styleClass="button" onMouseClicked="#quitGameClicked" stylesheets="@style.css" text="Quit game" textFill="WHITE">
+                <Button mnemonicParsing="false" onMouseClicked="#quitGameClicked" styleClass="button-hover" stylesheets="@style.css" text="Quit to main menu" textFill="WHITE">
                     <font>
                         <Font name="Open Sans ExtraBold" size="14.0" />
                     </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
                 </Button>
 
                 <Text fill="WHITE" text="Ranking" textAlignment="CENTER" wrappingWidth="320.0">
@@ -96,9 +117,10 @@
                     </VBox.margin>
                 </Text>
 
-                <ScrollPane hbarPolicy="NEVER" prefHeight="120.0" prefWidth="320.0" stylesheets="@style.css" vbarPolicy="AS_NEEDED">
+                <ScrollPane fitToWidth="true" hbarPolicy="NEVER" prefHeight="120.0" prefWidth="320.0" stylesheets="@style.css">
                     <content>
-                        <VBox fx:id="playerRankingContainer" prefWidth="286.0" maxWidth="-Infinity" alignment="CENTER">
+                        <VBox fx:id="playerRankingContainer" alignment="CENTER" prefHeight="15.0" prefWidth="195.0">
+
                         </VBox>
                     </content>
                 </ScrollPane>

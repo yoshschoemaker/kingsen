@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -9,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="480.0" minWidth="320.0" prefHeight="480.0" prefWidth="320.0" style="-fx-background-color: #3F4FA5;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.startController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="480.0" minWidth="320.0" prefHeight="480.0" prefWidth="320.0" style="-fx-background-color: #3F4FA5;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.startController">
    <children>
 
       <VBox alignment="BOTTOM_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="96.0" prefWidth="320.0" spacing="8.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
@@ -39,20 +40,29 @@
 
             <HBox alignment="CENTER" spacing="16.0">
                <children>
-                  <ImageView fitHeight="55.0" fitWidth="55.0" onMouseClicked="#settingsButtonPushed" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="55.0" fitWidth="55.0" onMouseClicked="#settingsButtonPushed" pickOnBounds="true" preserveRatio="true" styleClass="image-view-button">
                      <image>
                         <Image url="@assets/images/btn-settings.png" />
                      </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </ImageView>
-                  <ImageView fx:id="startButton" fitHeight="90.0" onMouseClicked="#startButtonPushed" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="startButton" fitHeight="90.0" onMouseClicked="#startButtonPushed" pickOnBounds="true" preserveRatio="true" styleClass="image-view-button">
                      <image>
                         <Image url="@assets/images/btn-play.png" />
                      </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </ImageView>
-                  <ImageView fitHeight="55.0" fitWidth="55.0" onMouseClicked="#informationButtonPushed" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="55.0" fitWidth="55.0" onMouseClicked="#informationButtonPushed" pickOnBounds="true" preserveRatio="true" styleClass="image-view-button">
                      <image>
                         <Image url="@assets/images/btn-info.png" />
                      </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </ImageView>
                </children>
             </HBox>

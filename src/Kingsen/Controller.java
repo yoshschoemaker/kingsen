@@ -37,7 +37,9 @@ public abstract class Controller {
             currController.setGame(game);
             currController.setCurrStage(currStage);
             currController.setPreviousFxmls(previousFxmls);
-            currController.previousFxmls.add(fxmlFileName);
+            if (!fxmlFileName.equals("menu")) {
+                currController.previousFxmls.add(fxmlFileName);
+            }
             currStage.setScene(scene);
             currController.afterInitialization();
         } catch (IOException ex) {
@@ -61,7 +63,9 @@ public abstract class Controller {
             currController.setGame(game);
             currController.setCurrStage(currStage);
             currController.setPreviousFxmls(previousFxmls);
-            currController.previousFxmls.add(fxmlFileName);
+            if (!fxmlFileName.equals("menu")) {
+                currController.previousFxmls.add(fxmlFileName);
+            }
             currController.setCard(card);
             currStage.setScene(scene);
             currController.afterInitialization();
@@ -89,7 +93,7 @@ public abstract class Controller {
      * @return the String of the name of the previous .fxml file
      */
     public String getPreviousSceneName() {
-        return previousFxmls.get(previousFxmls.size() - 2);
+        return previousFxmls.get(previousFxmls.size() - 1);
     }
 
     public void setPreviousFxmls(ArrayList<String> previousFxmls) {

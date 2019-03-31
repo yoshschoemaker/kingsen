@@ -1,5 +1,6 @@
 package ui;
 
+import Kingsen.Command.ResetGameCommand;
 import Kingsen.Controller;
 import Kingsen.Game.Player;
 import javafx.fxml.FXML;
@@ -43,7 +44,7 @@ public class menuController extends Controller {
         }
 
         // Hide Give Penalty Button when player comes from the Card scene
-        if (getPreviousSceneName().equals("card")) {
+        if (getPreviousSceneName().equals("card") || getPreviousSceneName().equals("givePenalty")) {
             givePenaltyBtn.setVisible(false);
         }
     }
@@ -57,6 +58,7 @@ public class menuController extends Controller {
     }
 
     public void quitGameClicked() {
-        System.exit(0);
+        game.executeCommand(new ResetGameCommand(game));
+        switchScene("start");
     }
 }

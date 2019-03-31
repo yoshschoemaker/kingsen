@@ -10,6 +10,7 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.scene.Cursor;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -18,6 +19,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
 
 import java.io.IOException;
 import java.util.List;
@@ -30,13 +32,22 @@ public class selectPlayersController extends Controller {
     @FXML
     VBox uiPlayerList;
 
+    @FXML
+    Text errorText;
+
     public void continueButtonPushed(MouseEvent event) throws IOException {
+        errorText.setVisible(false);
+
         // There are no players in the list
         if (uiPlayerList.getChildren().isEmpty()) {
+            errorText.setVisible(true);
+            errorText.setText("Can't start. Add some players first!");
             System.out.println(ConsoleColors.RED + "Add some players first!" + ConsoleColors.RESET);
         }
         // There are less than 2 players in the list
         else if (uiPlayerList.getChildren().size() < 2) {
+            errorText.setVisible(true);
+            errorText.setText("Add at least two players!");
             System.out.println(ConsoleColors.RED + "Add at least two players!" + ConsoleColors.RESET);
         }
         // YEAH!! Enough players to start the game.
@@ -59,6 +70,7 @@ public class selectPlayersController extends Controller {
     }
 
     public void addPlayer(MouseEvent event) throws IOException {
+        errorText.setVisible(false);
         String playerName = playerNameInput.getText();
 
         // Only add player when there is a name
@@ -82,6 +94,7 @@ public class selectPlayersController extends Controller {
             // Style and position buttons
             playerRemoveButton.setGraphic(iv);
             playerRemoveButton.getStyleClass().add("playerRemoveBtn");
+            playerRemoveButton.setCursor(Cursor.HAND);
             playerNameButton.getStyleClass().add("playerBlock");
 
             // Add remove button event listener.
@@ -113,6 +126,8 @@ public class selectPlayersController extends Controller {
             // Add the row in the UI.
             uiPlayerList.getChildren().add(hbox);
         } else {
+            errorText.setVisible(true);
+            errorText.setText("Enter a name for the player!");
             System.out.println(ConsoleColors.RED + "Cannot add player with empty name!" + ConsoleColors.RESET);
         }
     }

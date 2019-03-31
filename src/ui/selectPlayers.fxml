@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
@@ -12,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="450.0" minWidth="320.0" prefHeight="480.0" prefWidth="320.0" style="-fx-background-color: #3F4FA5;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.selectPlayersController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="450.0" minWidth="320.0" prefHeight="480.0" prefWidth="320.0" style="-fx-background-color: #3F4FA5;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.selectPlayersController">
    <children>
 
       <VBox alignment="BOTTOM_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="96.0" prefWidth="320.0" spacing="8.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
@@ -25,18 +27,20 @@
          </children>
       </VBox>
 
-      <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="390.0" prefWidth="344.0" spacing="8.0" AnchorPane.bottomAnchor="128.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="380.0" prefWidth="320.0" spacing="8.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
+            <Text fx:id="errorText" fill="#fc6592" text="Error text" textAlignment="CENTER" visible="false">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Text>
 
             <Text fill="WHITE" text="Players" textAlignment="CENTER" wrappingWidth="320.0">
                <font>
                   <Font name="Open Sans Bold" size="24.0" />
                </font>
                <VBox.margin>
-                  <Insets>
-                     <top>40</top>
-                     <bottom>20</bottom>
-                  </Insets>
+                  <Insets />
                </VBox.margin>
             </Text>
 
@@ -50,42 +54,59 @@
                         <right>8</right>
                      </Insets>
                   </HBox.margin>
+                  <cursor>
+                     <Cursor fx:constant="TEXT" />
+                  </cursor>
                </TextField>
-               <Button mnemonicParsing="false" onMouseClicked="#addPlayer" styleClass="playerAddBtn" stylesheets="@style.css">
+               <Button mnemonicParsing="false" onMouseClicked="#addPlayer" stylesheets="@style.css">
                   <graphic>
                      <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                         <image>
                            <Image url="@assets/images/plus-icon.png" />
                         </image>
+                        <cursor>
+                           <Cursor fx:constant="HAND" />
+                        </cursor>
                      </ImageView>
                   </graphic>
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+                  <styleClass>
+                     <String fx:value="playerAddBtn" />
+                     <String fx:value="button-hover" />
+                  </styleClass>
                </Button>
                <padding>
                   <Insets bottom="16.0" top="16.0" />
                </padding>
             </HBox>
 
-            <ScrollPane hbarPolicy="NEVER" maxWidth="300.0" prefWidth="300.0" stylesheets="@style.css" vbarPolicy="AS_NEEDED">
+            <ScrollPane hbarPolicy="NEVER" maxWidth="300.0" prefWidth="300.0" stylesheets="@style.css" vbarPolicy="AS_NEEDED" VBox.vgrow="ALWAYS">
                <content>
-                  <VBox fx:id="uiPlayerList" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="286.0">
+                  <VBox fx:id="uiPlayerList" alignment="TOP_CENTER" prefHeight="87.0" prefWidth="286.0">
 
                   </VBox>
                </content>
                <padding>
                   <!-- Weird fix -->
-                  <Insets left="6.0"/>
+                  <Insets left="6.0" />
                </padding>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
             </ScrollPane>
 
-            <ImageView fx:id="startButton" fitHeight="60.0" fitWidth="60.0" onMouseClicked="#continueButtonPushed" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="startButton" fitHeight="60.0" fitWidth="60.0" onMouseClicked="#continueButtonPushed" pickOnBounds="true" preserveRatio="true" styleClass="image-view-button">
                <image>
                   <Image url="@assets/images/btn-play.png" />
                </image>
                <VBox.margin>
-                  <Insets>
-                     <top>20</top>
-                  </Insets>
+                  <Insets bottom="20.0" />
                </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </ImageView>
 
          </children>

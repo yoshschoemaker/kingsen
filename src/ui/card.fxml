@@ -2,19 +2,20 @@
 
 <?import java.lang.String?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="450.0" minWidth="320.0" prefHeight="480.0" prefWidth="320.0" style="-fx-background-color: #3F4FA5;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.cardController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="450.0" minWidth="320.0" prefHeight="480.0" prefWidth="320.0" style="-fx-background-color: #3F4FA5;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.cardController">
    <children>
 
-      <VBox alignment="BOTTOM_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="96.0" prefWidth="320.0" spacing="8.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <VBox alignment="BOTTOM_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="96.0" prefWidth="320.0" spacing="8.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
             <ImageView fitHeight="125.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -24,7 +25,7 @@
          </children>
       </VBox>
 
-      <HBox alignment="TOP_CENTER" AnchorPane.topAnchor="16.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <HBox alignment="TOP_CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="16.0">
          <Text fx:id="hasPickedCardText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="... has picked this card">
             <font>
                <Font name="System Bold" size="12.0" />
@@ -63,11 +64,14 @@
                <image>
                   <Image url="@assets/images/menu-icon.png" />
                </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </ImageView>
          </children>
       </HBox>
 
-      <VBox fx:id="cardVbox" alignment="CENTER" stylesheets="@style.css" VBox.vgrow="ALWAYS" maxHeight="400" maxWidth="500" minWidth="320.0" prefHeight="480.0" prefWidth="320.0" spacing="8.0" AnchorPane.bottomAnchor="32.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="48.0">
+      <VBox fx:id="cardVbox" alignment="CENTER" layoutY="66.0" maxHeight="400" maxWidth="500" minWidth="320.0" prefHeight="480.0" prefWidth="320.0" spacing="8.0" stylesheets="@style.css" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="66.0" VBox.vgrow="ALWAYS">
          <children>
             <ImageView fx:id="cardTypeImage" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -107,10 +111,13 @@
                </VBox.margin>
             </Label>
 
-            <ImageView fx:id="startButton" fitHeight="60.0" fitWidth="60" onMouseClicked="#continueClicked" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="startButton" fitHeight="60.0" fitWidth="60" onMouseClicked="#continueClicked" pickOnBounds="true" preserveRatio="true" styleClass="image-view-button">
                <image>
                   <Image url="@assets/images/btn-play.png" />
                </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </ImageView>
 
          </children>

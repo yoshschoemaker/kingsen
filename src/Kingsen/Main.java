@@ -30,6 +30,7 @@ public class Main extends Application {
         primaryStage.setTitle("Kingsen App");
         primaryStage.setScene(new Scene(root));
         primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("/ui/assets/images/app-icon.png")));
+        primaryStage.setMaximized(true);
         primaryStage.show();
     }
 
