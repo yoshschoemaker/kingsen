@@ -70,9 +70,9 @@
             <children>
 
 
-                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu" textAlignment="CENTER" wrappingWidth="320.0">
+                <Text fill="WHITE" styleClass="title" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu" textAlignment="CENTER" wrappingWidth="320.0">
                     <font>
-                        <Font name="Open Sans Bold" size="24.0" />
+                        <Font size="24.0" />
                     </font>
                     <VBox.margin>
                         <Insets>
@@ -82,12 +82,9 @@
                     </VBox.margin>
                 </Text>
                 <Button fx:id="givePenaltyBtn" mnemonicParsing="false" onMouseClicked="#givePenaltyClicked" styleClass="button-hover" stylesheets="@style.css" text="Give penalty" textFill="WHITE">
-                    <font>
-                        <Font name="Open Sans ExtraBold" size="14.0" />
-                    </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
+                   <cursor>
+                      <Cursor fx:constant="HAND" />
+                   </cursor>
                 </Button>
                 <Button mnemonicParsing="false" onMouseClicked="#closeMenuClicked" styleClass="button-hover" stylesheets="@style.css" text="Close menu" textFill="WHITE">
                     <font>

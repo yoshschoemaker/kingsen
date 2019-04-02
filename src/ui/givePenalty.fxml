@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="450.0" minWidth="320.0" prefHeight="480.0" prefWidth="320.0" style="-fx-background-color: #3F4FA5;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.givePenaltyController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="450.0" minWidth="320.0" prefHeight="480.0" prefWidth="320.0" style="-fx-background-color: #3F4FA5;"  stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.givePenaltyController">
     <children>
 
         <VBox alignment="BOTTOM_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="96.0" prefWidth="320.0" spacing="8.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
@@ -37,9 +37,9 @@
                         </Insets>
                     </HBox.margin>
                 </ImageView>
-                <Text fx:id="kingsLeftToFind" fill="WHITE" text="4">
+                <Text styleClass="title" fx:id="kingsLeftToFind" fill="WHITE" text="4">
                     <font>
-                        <Font name="Open Sans ExtraBold" size="14.0" />
+                        <Font size="14.0" />
                     </font>
                     <HBox.margin>
                         <Insets>
@@ -69,9 +69,9 @@
         <VBox alignment="CENTER" layoutY="47.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="305.0" minWidth="320.0" prefHeight="305.0" prefWidth="320.0" spacing="8.0" AnchorPane.bottomAnchor="128.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="47.0">
             <children>
 
-               <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Who's got the penalty point?" textAlignment="CENTER" wrappingWidth="320.0">
+               <Text styleClass="title" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Who's got the penalty point?" textAlignment="CENTER" wrappingWidth="320.0">
                    <font>
-                       <Font name="Open Sans Bold" size="20.0" />
+                       <Font size="20.0" />
                    </font>
                    <VBox.margin>
                        <Insets>
@@ -81,7 +81,7 @@
                    </VBox.margin>
                </Text>
 
-               <ScrollPane hbarPolicy="NEVER" maxWidth="300.0" prefHeight="100.0" prefWidth="300.0" stylesheets="@style.css" vbarPolicy="AS_NEEDED" VBox.vgrow="ALWAYS">
+               <ScrollPane hbarPolicy="NEVER" maxWidth="300.0" prefHeight="100.0" prefWidth="300.0" vbarPolicy="AS_NEEDED" VBox.vgrow="ALWAYS">
                    <content>
                        <VBox fx:id="playerContainer" alignment="CENTER" maxWidth="-Infinity" prefHeight="96.0" prefWidth="293.0" spacing="8.0">
                        </VBox>
@@ -92,10 +92,7 @@
                    </padding>
                </ScrollPane>
 
-             <Button mnemonicParsing="false" onMouseClicked="#continueClicked" styleClass="cancelBtn" stylesheets="@style.css" text="Skip" textFill="WHITE">
-                <font>
-                   <Font name="Open Sans ExtraBold" size="14.0" />
-                </font>
+             <Button mnemonicParsing="false" onMouseClicked="#continueClicked" styleClass="cancelBtn" text="Skip" textFill="WHITE">
                  <VBox.margin>
                      <Insets>
                          <top>20</top>

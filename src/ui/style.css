@@ -1,3 +1,13 @@
+.title{
+    -fx-font-family: 'Open Sans';
+    -fx-font-weight: bold;
+}
+
+.text{
+    -fx-font-family: 'Open Sans';
+    -fx-font-weight: normal;
+}
+
 .button{
     -fx-fill: white;
     -fx-font-size: 14;
@@ -5,7 +15,8 @@
     -fx-background-radius: 15px;
     -fx-pref-width: 180px;
     -fx-padding: 10px;
-    -fx-font-weight: bold;
+    -fx-font-family: 'Open Sans' !important;
+    -fx-font-weight: bold !important;
 }
 
 .button-hover:hover {
@@ -30,15 +41,17 @@
     -fx-pref-width: 140px;
     -fx-padding: 10px;
     -fx-font-weight: bold;
+    -fx-font-family: 'Open Sans';
 }
 
 .playerAddBlock{
     -fx-fill: white;
-    -fx-font-size: 14;
     -fx-background-color: #FD6592;
     -fx-background-radius: 15px;
     -fx-padding: 10px;
+    -fx-font-family: 'Open Sans';
     -fx-font-weight: bold;
+    -fx-font-size: 14;
     -fx-text-fill: white;
     -fx-pref-width: 140px;
     -fx-prompt-text-fill: white;
@@ -56,6 +69,7 @@
     -fx-font-weight: bold;
     -fx-fill: white;
     -fx-font-size: 14;
+    -fx-font-family: 'Open Sans';
 }
 
 .cancelBtn:hover {
@@ -138,3 +152,7 @@
     -fx-background-color: #FD6592;
     -fx-border-color: #FD6592;
 }
+
+
+
+

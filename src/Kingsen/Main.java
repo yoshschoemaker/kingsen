@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import ui.startController;
 
@@ -32,6 +33,10 @@ public class Main extends Application {
         primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("/ui/assets/images/app-icon.png")));
         primaryStage.setMaximized(true);
         primaryStage.show();
+
+        // Font loading
+//        Font.loadFont(getClass().getResourceAsStream("/ui/assets/fonts/OpenSans-Bold.ttf"), 14);
+//        Font.loadFont(getClass().getResourceAsStream("/ui/assets/fonts/OpenSans-Regular.ttf"), 14);
     }
 
     public static void main(String[] args) {

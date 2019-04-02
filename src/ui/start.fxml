@@ -29,9 +29,9 @@
          </padding>
          <children>
 
-            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Kingsen" textAlignment="CENTER">
+            <Text styleClass="title" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Kingsen" textAlignment="CENTER">
                <font>
-                  <Font name="Open Sans Bold" size="48.0" />
+                  <Font size="48.0"/>
                </font>
                <VBox.margin>
                   <Insets bottom="80.0" />
