@@ -44,6 +44,7 @@ public class CardDeckRuleDecorator extends CardDeckDecorator {
                         break;
                     case 6:
                         card.getProperties().setPlayable(true);
+                        card.getProperties().setPenaltyEnabled(false);
                         card.getRule().setRuleTitle("Assignment");
                         card.getRule().setDescription("Choose an action a player has to make before or after drinking. When a player doesn’t perform this action, he gets a penalty.");
                         break;
@@ -61,7 +62,7 @@ public class CardDeckRuleDecorator extends CardDeckDecorator {
                         break;
                     case 10:
                         card.getRule().setRuleTitle("Never have I ever");
-                        card.getRule().setDescription("Everyone holds up 3 fingers. The person who drew this card says a sentence starting with ‘Never have I ever..’ and completes with something he/she hasn’t done. Whoever has done it, lowers one finger. First person to lowers all fingers gets the penalty.");
+                        card.getRule().setDescription("Everyone holds up 3 fingers. The person who drew this card says a sentence starting with ‘Never have I ever..’ and completes with something he/she hasn’t done. Whoever has done it, lowers one finger. First to lowers all fingers gets the penalty.");
                         break;
                 }
             }
@@ -90,7 +91,7 @@ public class CardDeckRuleDecorator extends CardDeckDecorator {
                 card.getProperties().setPlayable(true);
                 card.getProperties().setPenaltyEnabled(false);
                 card.getRule().setRuleTitle("Snake eyes");
-                card.getRule().setDescription("No one can look you in the eyes until another ace is picked. Whenever someone looks in your eyes, they receive a penalty point. While you would think it sucks to be the out casted snake eyes, it actually provides an opportunity to get the other players very drunk by tricking them into looking at you.");
+                card.getRule().setDescription("No one can look you in the eyes until another ace is picked. Whenever someone looks in your eyes, they receive a penalty point.");
             }
         }
 

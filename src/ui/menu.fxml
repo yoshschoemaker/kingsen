@@ -9,10 +9,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="450.0" minWidth="320.0" prefHeight="480.0" prefWidth="320.0" style="-fx-background-color: #3F4FA5;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.menuController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="450.0" minWidth="320.0" prefHeight="480.0" prefWidth="320.0" style="-fx-background-color: #3F4FA5;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.menuController">
     <children>
 
         <VBox alignment="BOTTOM_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="96.0" prefWidth="320.0" spacing="8.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
@@ -37,10 +36,7 @@
                         </Insets>
                     </HBox.margin>
                 </ImageView>
-                <Text fx:id="kingsLeftToFind" fill="WHITE" text="4">
-                    <font>
-                        <Font name="Open Sans ExtraBold" size="14.0" />
-                    </font>
+                <Text fx:id="kingsLeftToFind" fill="WHITE" text="4" style="-fx-font-family: Open Sans; -fx-font-weight: 800; -fx-font-size: 16.0">
                     <HBox.margin>
                         <Insets>
                             <top>-2.5</top>
@@ -66,14 +62,11 @@
          </cursor>
         </HBox>
 
-        <VBox alignment="CENTER" layoutY="47.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="305.0" minWidth="320.0" prefHeight="305.0" prefWidth="320.0" spacing="8.0" AnchorPane.bottomAnchor="128.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="47.0">
+        <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="305.0" minWidth="320.0" prefHeight="305.0" prefWidth="320.0" spacing="12.0" AnchorPane.bottomAnchor="128.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="47.0">
             <children>
 
 
-                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu" textAlignment="CENTER" wrappingWidth="320.0">
-                    <font>
-                        <Font name="Open Sans Bold" size="24.0" />
-                    </font>
+                <Text fill="WHITE" style="-fx-font-family: Open Sans; -fx-font-weight: 800; -fx-font-size: 26.0" text="Menu" textAlignment="CENTER" wrappingWidth="320.0">
                     <VBox.margin>
                         <Insets>
                             <top>20</top>
@@ -81,35 +74,26 @@
                         </Insets>
                     </VBox.margin>
                 </Text>
-                <Button fx:id="givePenaltyBtn" mnemonicParsing="false" onMouseClicked="#givePenaltyClicked" styleClass="button-hover" stylesheets="@style.css" text="Give penalty" textFill="WHITE">
-                    <font>
-                        <Font name="Open Sans ExtraBold" size="14.0" />
-                    </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-                </Button>
-                <Button mnemonicParsing="false" onMouseClicked="#closeMenuClicked" styleClass="button-hover" stylesheets="@style.css" text="Close menu" textFill="WHITE">
-                    <font>
-                        <Font name="Open Sans ExtraBold" size="14.0" />
-                    </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-                </Button>
-                <Button mnemonicParsing="false" onMouseClicked="#quitGameClicked" styleClass="button-hover" stylesheets="@style.css" text="Quit to main menu" textFill="WHITE">
-                    <font>
-                        <Font name="Open Sans ExtraBold" size="14.0" />
-                    </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
+
+                <Button fx:id="givePenaltyBtn" mnemonicParsing="false" onMouseClicked="#givePenaltyClicked" style="-fx-font-family: Open Sans; -fx-font-weight: 800; -fx-font-size: 16.0" styleClass="button-hover" text="Give penalty" textFill="WHITE">
+                   <cursor>
+                      <Cursor fx:constant="HAND" />
+                   </cursor>
                 </Button>
 
-                <Text fill="WHITE" text="Ranking" textAlignment="CENTER" wrappingWidth="320.0">
-                    <font>
-                        <Font name="Open Sans Bold" size="16.0" />
-                    </font>
+                <Button mnemonicParsing="false" onMouseClicked="#closeMenuClicked" styleClass="button-hover" style="-fx-font-family: Open Sans; -fx-font-weight: 800; -fx-font-size: 16.0" text="Close menu" textFill="WHITE">
+                   <cursor>
+                      <Cursor fx:constant="HAND" />
+                   </cursor>
+                </Button>
+
+                <Button mnemonicParsing="false" onMouseClicked="#quitGameClicked" styleClass="button-hover" style="-fx-font-family: Open Sans; -fx-font-weight: 800; -fx-font-size: 16.0" text="Quit to main menu" textFill="WHITE">
+                   <cursor>
+                      <Cursor fx:constant="HAND" />
+                   </cursor>
+                </Button>
+
+                <Text fill="WHITE" text="Ranking" textAlignment="CENTER" style="-fx-font-family: Open Sans; -fx-font-weight: 800; -fx-font-size: 20.0" wrappingWidth="320.0">
                     <VBox.margin>
                         <Insets>
                             <top>40</top>
@@ -117,7 +101,7 @@
                     </VBox.margin>
                 </Text>
 
-                <ScrollPane fitToWidth="true" hbarPolicy="NEVER" prefHeight="120.0" prefWidth="320.0" stylesheets="@style.css">
+                <ScrollPane fitToWidth="true" hbarPolicy="NEVER" prefHeight="120.0" prefWidth="320.0">
                     <content>
                         <VBox fx:id="playerRankingContainer" alignment="CENTER" prefHeight="15.0" prefWidth="195.0">
 

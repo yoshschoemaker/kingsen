@@ -23,6 +23,7 @@ public class gameOverController extends Controller {
                 Text text = new Text();
                 text.setFill(Paint.valueOf("WHITE"));
                 text.setTextAlignment(TextAlignment.CENTER);
+                text.setStyle("-fx-font: 16 'Open Sans';");
                 text.setText(String.format("%1$s. %2$s %3$spts", Integer.toString(i), player.getName(), player.getScore()));
                 playerRankingContainer.getChildren().add(text);
                 i++;
@@ -32,6 +33,7 @@ public class gameOverController extends Controller {
             text.setFill(Paint.valueOf("WHITE"));
             text.setTextAlignment(TextAlignment.CENTER);
             text.setText("Seems like everyone is a winner?");
+            text.setStyle("-fx-font: 16 'Open Sans';");
             playerRankingContainer.getChildren().add(text);
         }
     }

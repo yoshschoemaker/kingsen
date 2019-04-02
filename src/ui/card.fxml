@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="450.0" minWidth="320.0" prefHeight="480.0" prefWidth="320.0" style="-fx-background-color: #3F4FA5;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.cardController">
@@ -25,11 +24,8 @@
          </children>
       </VBox>
 
-      <HBox alignment="TOP_CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="16.0">
-         <Text fx:id="hasPickedCardText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="... has picked this card">
-            <font>
-               <Font name="System Bold" size="12.0" />
-            </font>
+      <HBox alignment="TOP_CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="12.0">
+         <Text style="-fx-font-family: Open Sans; -fx-font-weight: 800; -fx-font-size: 16.0" fx:id="hasPickedCardText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="... has picked this card">
          </Text>
       </HBox>
 
@@ -45,10 +41,7 @@
                   </Insets>
                </HBox.margin>
             </ImageView>
-            <Text fx:id="kingsLeftToFind" fill="WHITE" text="4">
-               <font>
-                  <Font name="Open Sans ExtraBold" size="14.0" />
-               </font>
+            <Text fx:id="kingsLeftToFind" fill="WHITE" text="4" style="-fx-font-family: Open Sans; -fx-font-weight: 800; -fx-font-size: 16.0">
                <HBox.margin>
                   <Insets>
                      <top>-2.5</top>
@@ -69,6 +62,9 @@
                </cursor>
             </ImageView>
          </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </HBox>
 
       <VBox fx:id="cardVbox" alignment="CENTER" layoutY="66.0" maxHeight="400" maxWidth="500" minWidth="320.0" prefHeight="480.0" prefWidth="320.0" spacing="8.0" stylesheets="@style.css" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="66.0" VBox.vgrow="ALWAYS">
@@ -83,26 +79,17 @@
                   </Insets>
                </VBox.margin>
             </ImageView>
-            <Text fx:id="cardNumberOrFace" fill="#fd6592" text="6" textAlignment="CENTER">
-               <font>
-                  <Font name="Open Sans ExtraBold" size="24.0" />
-               </font>
+            <Text style="-fx-font-family: Open Sans; -fx-font-weight: 800; -fx-font-size: 26.0" fx:id="cardNumberOrFace" fill="#fd6592" text="6" textAlignment="CENTER">
             </Text>
 
-            <Text fx:id="ruleTitle" fill="WHITE" text="Rule title">
-               <font>
-                  <Font name="Open Sans ExtraBold" size="16.0" />
-               </font>
+            <Text style="-fx-font-family: Open Sans; -fx-font-weight: 800; -fx-font-size: 18.0" fx:id="ruleTitle" fill="WHITE" text="Rule title">
                <VBox.margin>
                   <Insets>
                      <top>20</top>
                   </Insets>
                </VBox.margin>
             </Text>
-            <Label fx:id="ruleDescription" prefHeight="100.0" prefWidth="230.0" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard." textAlignment="CENTER" textFill="WHITE" wrapText="true">
-               <font>
-                  <Font name="Open Sans SemiBold" size="12.0" />
-               </font>
+            <Label style="-fx-font-family: Open Sans; -fx-font-weight: 600; -fx-font-size: 14.0" fx:id="ruleDescription" prefHeight="140.0" prefWidth="260.0" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard." textAlignment="CENTER" textFill="WHITE" wrapText="true">
                <VBox.margin>
                   <Insets>
                      <top>15</top>

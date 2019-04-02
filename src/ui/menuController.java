@@ -31,6 +31,7 @@ public class menuController extends Controller {
                 Text text = new Text();
                 text.setFill(Paint.valueOf("WHITE"));
                 text.setTextAlignment(TextAlignment.CENTER);
+                text.setStyle("-fx-font: 16 'Open Sans';");
                 text.setText(String.format("%1$s. %2$s %3$spts", Integer.toString(i), player.getName(), player.getScore()));
                 playerRankingContainer.getChildren().add(text);
                 i++;
@@ -39,6 +40,7 @@ public class menuController extends Controller {
             Text text = new Text();
             text.setFill(Paint.valueOf("WHITE"));
             text.setTextAlignment(TextAlignment.CENTER);
+            text.setStyle("-fx-font: 16 'Open Sans';");
             text.setText("There are no results yet.");
             playerRankingContainer.getChildren().add(text);
         }

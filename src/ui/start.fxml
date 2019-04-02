@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="480.0" minWidth="320.0" prefHeight="480.0" prefWidth="320.0" style="-fx-background-color: #3F4FA5;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.startController">
@@ -29,10 +28,7 @@
          </padding>
          <children>
 
-            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Kingsen" textAlignment="CENTER">
-               <font>
-                  <Font name="Open Sans Bold" size="48.0" />
-               </font>
+            <Text fill="WHITE" style="-fx-font-family: Open Sans; -fx-font-weight: 800; -fx-font-size: 48.0" text="Kingsen" textAlignment="CENTER">
                <VBox.margin>
                   <Insets bottom="80.0" />
                </VBox.margin>

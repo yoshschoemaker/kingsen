@@ -11,7 +11,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="450.0" minWidth="320.0" prefHeight="480.0" prefWidth="320.0" style="-fx-background-color: #3F4FA5;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.selectPlayersController">
@@ -27,28 +26,19 @@
          </children>
       </VBox>
 
-      <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="380.0" prefWidth="320.0" spacing="8.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="380.0" prefWidth="320.0" spacing="12.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Text fx:id="errorText" fill="#fc6592" text="Error text" textAlignment="CENTER" visible="false">
-               <font>
-                  <Font name="System Bold" size="13.0" />
-               </font>
+            <Text style="-fx-font-family: Open Sans; -fx-font-weight: 700; -fx-font-size: 16.0" fx:id="errorText" fill="#fc6592" text="Error text" textAlignment="CENTER" visible="false">
             </Text>
 
-            <Text fill="WHITE" text="Players" textAlignment="CENTER" wrappingWidth="320.0">
-               <font>
-                  <Font name="Open Sans Bold" size="24.0" />
-               </font>
+            <Text style="-fx-font-family: Open Sans; -fx-font-weight: 800; -fx-font-size: 28.0" fill="WHITE" text="Players" textAlignment="CENTER" wrappingWidth="320.0">
                <VBox.margin>
                   <Insets />
                </VBox.margin>
             </Text>
 
             <HBox alignment="CENTER" HBox.hgrow="ALWAYS">
-               <TextField fx:id="playerNameInput" promptText="Naam" styleClass="playerAddBlock" stylesheets="@style.css">
-                  <font>
-                     <Font name="Open Sans SemiBold" size="14.0" />
-                  </font>
+               <TextField style="-fx-font-family: Open Sans; -fx-font-weight: 700; -fx-font-size: 16.0" fx:id="playerNameInput" promptText="Name" styleClass="playerAddBlock" stylesheets="@style.css">
                   <HBox.margin>
                      <Insets>
                         <right>8</right>
