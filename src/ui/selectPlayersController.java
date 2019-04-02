@@ -96,6 +96,7 @@ public class selectPlayersController extends Controller {
             playerRemoveButton.getStyleClass().add("playerRemoveBtn");
             playerRemoveButton.setCursor(Cursor.HAND);
             playerNameButton.getStyleClass().add("playerBlock");
+            playerNameButton.setStyle("-fx-font: 16 'Open Sans';");
 
             // Add remove button event listener.
             playerRemoveButton.setOnAction(new EventHandler<ActionEvent>() {
