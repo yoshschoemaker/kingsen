@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import ui.startController;
+import javafx.scene.text.Font;
 
 import java.util.ArrayList;
 
@@ -32,6 +33,14 @@ public class Main extends Application {
         primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("/ui/assets/images/app-icon.png")));
         primaryStage.setMaximized(true);
         primaryStage.show();
+
+        // Load fonts
+        Font.loadFont(getClass().getResourceAsStream("/ui/assets/fonts/OpenSans-Light.ttf"), 14);
+        Font.loadFont(getClass().getResourceAsStream("/ui/assets/fonts/OpenSans-Regular.ttf"), 14);
+        Font.loadFont(getClass().getResourceAsStream("/ui/assets/fonts/OpenSans-SemiBold.ttf"), 14);
+        Font.loadFont(getClass().getResourceAsStream("/ui/assets/fonts/OpenSans-Bold.ttf"), 14);
+        Font.loadFont(getClass().getResourceAsStream("/ui/assets/fonts/OpenSans-ExtraBold.ttf"), 14);
+
     }
 
     public static void main(String[] args) {
